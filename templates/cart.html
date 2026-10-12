@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static shop_tags %}
+{% block title %}سبد خرید{% endblock %}
+{% block content %}
+<div class="container">
+  <p class="breadcrumb"><a href="{% url 'home' %}">خانه</a> / سبد خرید</p>
+  <h1 class="page-title">سبد خرید</h1>
+
+  {% if items %}
+  <div class="cart-layout">
+    <div class="cart-list">
+      {% for item in items %}
+      <div class="cart-item">
+        <a class="cart-thumb" href="{% url 'product' item.product.slug %}">
+          {% if item.product.image_url %}
+            <img src="{{ item.product.image_url }}" alt="{{ item.product.name }}">
+          {% else %}
+            <img src="{% static 'img/placeholder.svg' %}" alt="">
+          {% endif %}
+        </a>
+        <div class="grow">
+          <a href="{% url 'product' item.product.slug %}">{{ item.product.name }}</a>
+          <p class="muted">قیمت واحد: {{ item.product.final_price|toman }} تومان</p>
+        </div>
+        <form method="post" action="{% url 'cart:update' item.product.id %}">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{% url 'cart:detail' %}">
+          <input class="qty" type="number" name="qty" value="{{ item.qty }}" min="0" max="{{ item.product.stock }}" onchange="this.form.submit()">
+        </form>
+        <strong class="line-total">{{ item.total|toman }} تومان</strong>
+        <form method="post" action="{% url 'cart:update' item.product.id %}">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{% url 'cart:detail' %}">
+          <input type="hidden" name="qty" value="0">
+          <button class="icon-btn" title="حذف از سبد">✕</button>
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+
+    <aside class="summary-box">
+      <h3>خلاصه سفارش</h3>
+      <div class="summary-row"><span>تعداد اقلام</span><span>{{ items|length|fa }}</span></div>
+      <div class="summary-row"><span>هزینه ارسال</span><span>پس از ثبت آدرس</span></div>
+      <div class="summary-row total"><span>جمع کل</span><strong>{{ total|toman }} تومان</strong></div>
+      {% if not user.is_authenticated %}
+        <p class="muted">برای ثبت سفارش وارد حساب کاربری شوید؛ محتوای سبد شما حفظ می‌شود.</p>
+      {% endif %}
+      <a class="btn block" href="{% url 'orders:checkout' %}">
+        {% if user.is_authenticated %}ادامه و ثبت سفارش{% else %}ورود و ثبت سفارش{% endif %}
+      </a>
+      <a class="btn btn-outline block" href="{% url 'home' %}">ادامه خرید</a>
+    </aside>
+  </div>
+  {% else %}
+  <div class="empty">سبد خرید شما خالی است. <a class="link" href="{% url 'home' %}">بازگشت به فروشگاه</a></div>
+  {% endif %}
+</div>
+{% endblock %}

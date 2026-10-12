@@ -1,0 +1,1936 @@
+{
+  "categories": [
+    {
+      "slug": "cpu",
+      "name": "پردازنده",
+      "icon": "cpu"
+    },
+    {
+      "slug": "motherboard",
+      "name": "مادربورد",
+      "icon": "motherboard"
+    },
+    {
+      "slug": "gpu",
+      "name": "کارت گرافیک",
+      "icon": "gpu"
+    },
+    {
+      "slug": "ram",
+      "name": "رم",
+      "icon": "ram"
+    },
+    {
+      "slug": "storage",
+      "name": "SSD و هارد",
+      "icon": "storage"
+    },
+    {
+      "slug": "psu",
+      "name": "پاور",
+      "icon": "psu"
+    },
+    {
+      "slug": "case",
+      "name": "کیس",
+      "icon": "case"
+    },
+    {
+      "slug": "cooler",
+      "name": "خنک‌کننده",
+      "icon": "cooler"
+    },
+    {
+      "slug": "monitor",
+      "name": "مانیتور",
+      "icon": "monitor"
+    },
+    {
+      "slug": "accessories",
+      "name": "لوازم جانبی",
+      "icon": "accessories"
+    }
+  ],
+  "products": [
+    {
+      "slug": "kingston-fury-beast-16gb-ddr5-5200",
+      "name": "Kingston FURY Beast 16GB DDR5 5200MHz",
+      "category": "ram",
+      "brand": "Kingston",
+      "price": 3400000,
+      "discount": 0,
+      "stock": 2,
+      "sales": 5,
+      "image": "kingston-fury-beast-16gb-ddr5-5200.jpg",
+      "description": "حافظه رم Kingston FURY Beast 16GB DDR5 5200MHz از برند Kingston با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR5",
+        "ظرفیت": "16GB",
+        "فرکانس": "5200MHz",
+        "تاخیر (CAS)": "CL40"
+      },
+      "rating": 3.9,
+      "reviews": 4,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-prime-a520m-k",
+      "name": "ASUS PRIME A520M-K",
+      "category": "motherboard",
+      "brand": "ASUS",
+      "price": 2900000,
+      "discount": 0,
+      "stock": 9,
+      "sales": 116,
+      "image": "asus-prime-a520m-k.jpg",
+      "description": "مادربورد ASUS PRIME A520M-K از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM4",
+        "چیپست": "A520",
+        "سایز": "mATX",
+        "نوع رم": "DDR4"
+      },
+      "rating": 4.6,
+      "reviews": 17,
+      "gallery": ""
+    },
+    {
+      "slug": "gigabyte-rtx-4080-super-windforce",
+      "name": "Gigabyte GeForce RTX 4080 SUPER WINDFORCE V2 16G",
+      "category": "gpu",
+      "brand": "Gigabyte",
+      "price": 72000000,
+      "discount": 10,
+      "stock": 16,
+      "sales": 227,
+      "image": "gigabyte-rtx-4080-super-windforce.jpg",
+      "description": "کارت گرافیک Gigabyte GeForce RTX 4080 SUPER WINDFORCE V2 16G از برند Gigabyte با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce RTX 4080 SUPER",
+        "حافظه": "16GB",
+        "نوع حافظه": "GDDR6X",
+        "توان مصرفی": "320W"
+      },
+      "rating": 4.2,
+      "reviews": 30,
+      "gallery": ""
+    },
+    {
+      "slug": "intel-core-i3-12100f",
+      "name": "Intel Core i3-12100F",
+      "category": "cpu",
+      "brand": "Intel",
+      "price": 4200000,
+      "discount": 0,
+      "stock": 5,
+      "sales": 68,
+      "image": "intel-core-i3-12100f.jpg",
+      "description": "پردازنده Intel Core i3-12100F از برند Intel با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "تعداد هسته": "4 هسته",
+        "تعداد رشته": "8 رشته",
+        "فرکانس پایه / بوست": "3.3 / 4.3 GHz",
+        "توان مصرفی (TDP)": "58W"
+      },
+      "rating": 4.9,
+      "reviews": 43,
+      "gallery": ""
+    },
+    {
+      "slug": "logitech-g435-lightspeed",
+      "name": "Logitech G435 LIGHTSPEED Wireless Headset",
+      "category": "accessories",
+      "brand": "Logitech",
+      "price": 4500000,
+      "discount": 5,
+      "stock": 0,
+      "sales": 179,
+      "image": "logitech-g435-lightspeed.jpg",
+      "description": "لوازم جانبی Logitech G435 LIGHTSPEED Wireless Headset از برند Logitech با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "هدست",
+        "اتصال": "بی‌سیم (Lightspeed / Bluetooth)",
+        "درایور": "40mm"
+      },
+      "rating": 4.5,
+      "reviews": 56,
+      "gallery": ""
+    },
+    {
+      "slug": "wd-blue-sn580-500gb",
+      "name": "WD Blue SN580 500GB NVMe M.2",
+      "category": "storage",
+      "brand": "WD",
+      "price": 2600000,
+      "discount": 0,
+      "stock": 19,
+      "sales": 20,
+      "image": "wd-blue-sn580-500gb.jpg",
+      "description": "حافظه ذخیره‌سازی WD Blue SN580 500GB NVMe M.2 از برند WD با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "500GB",
+        "نوع": "SSD NVMe",
+        "رابط": "PCIe 4.0 x4",
+        "سرعت خواندن": "4000MB/s"
+      },
+      "rating": 4.1,
+      "reviews": 12,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-rog-strix-rtx-4090-oc",
+      "name": "ASUS ROG Strix GeForce RTX 4090 OC 24GB",
+      "category": "gpu",
+      "brand": "ASUS",
+      "price": 165000000,
+      "discount": 0,
+      "stock": 8,
+      "sales": 131,
+      "image": "asus-rog-strix-rtx-4090-oc.jpg",
+      "description": "کارت گرافیک ASUS ROG Strix GeForce RTX 4090 OC 24GB از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce RTX 4090",
+        "حافظه": "24GB",
+        "نوع حافظه": "GDDR6X",
+        "توان مصرفی": "450W"
+      },
+      "rating": 4.8,
+      "reviews": 25,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-dual-rx-7600-oc",
+      "name": "ASUS Dual Radeon RX 7600 OC 8GB",
+      "category": "gpu",
+      "brand": "ASUS",
+      "price": 15500000,
+      "discount": 15,
+      "stock": 15,
+      "sales": 242,
+      "image": "asus-dual-rx-7600-oc.jpg",
+      "description": "کارت گرافیک ASUS Dual Radeon RX 7600 OC 8GB از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "Radeon RX 7600",
+        "حافظه": "8GB",
+        "نوع حافظه": "GDDR6",
+        "توان مصرفی": "165W"
+      },
+      "rating": 4.4,
+      "reviews": 38,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-rog-strix-x670e-e-gaming-wifi",
+      "name": "ASUS ROG STRIX X670E-E GAMING WIFI",
+      "category": "motherboard",
+      "brand": "ASUS",
+      "price": 26500000,
+      "discount": 0,
+      "stock": 4,
+      "sales": 83,
+      "image": "asus-rog-strix-x670e-e-gaming-wifi.jpg",
+      "description": "مادربورد ASUS ROG STRIX X670E-E GAMING WIFI از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM5",
+        "چیپست": "X670E",
+        "سایز": "ATX",
+        "نوع رم": "DDR5"
+      },
+      "rating": 4.0,
+      "reviews": 51,
+      "gallery": ""
+    },
+    {
+      "slug": "wd-black-sn770-1tb",
+      "name": "WD_BLACK SN770 1TB NVMe M.2",
+      "category": "storage",
+      "brand": "WD",
+      "price": 5200000,
+      "discount": 0,
+      "stock": 11,
+      "sales": 194,
+      "image": "wd-black-sn770-1tb.jpg",
+      "description": "حافظه ذخیره‌سازی WD_BLACK SN770 1TB NVMe M.2 از برند WD با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "1TB",
+        "نوع": "SSD NVMe",
+        "رابط": "PCIe 4.0 x4",
+        "سرعت خواندن": "5150MB/s"
+      },
+      "rating": 4.7,
+      "reviews": 7,
+      "gallery": ""
+    },
+    {
+      "slug": "gigabyte-p750gm",
+      "name": "Gigabyte P750GM",
+      "category": "psu",
+      "brand": "Gigabyte",
+      "price": 5200000,
+      "discount": 20,
+      "stock": 18,
+      "sales": 35,
+      "image": "gigabyte-p750gm.jpg",
+      "description": "منبع تغذیه Gigabyte P750GM از برند Gigabyte با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "توان": "750W",
+        "گواهی بازدهی": "80 Plus Gold",
+        "نوع کابل": "تمام‌ماژولار"
+      },
+      "rating": 4.3,
+      "reviews": 20,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-vengeance-rgb-32gb-ddr5-6400",
+      "name": "Corsair Vengeance RGB 32GB (2x16GB) DDR5 6400MHz",
+      "category": "ram",
+      "brand": "Corsair",
+      "price": 9600000,
+      "discount": 0,
+      "stock": 7,
+      "sales": 146,
+      "image": "corsair-vengeance-rgb-32gb-ddr5-6400.jpg",
+      "description": "حافظه رم Corsair Vengeance RGB 32GB (2x16GB) DDR5 6400MHz از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR5",
+        "ظرفیت": "32GB",
+        "فرکانس": "6400MHz",
+        "تاخیر (CAS)": "CL32"
+      },
+      "rating": 3.9,
+      "reviews": 33,
+      "gallery": ""
+    },
+    {
+      "slug": "intel-core-i5-12400f",
+      "name": "Intel Core i5-12400F",
+      "category": "cpu",
+      "brand": "Intel",
+      "price": 6500000,
+      "discount": 0,
+      "stock": 14,
+      "sales": 257,
+      "image": "intel-core-i5-12400f.jpg",
+      "description": "پردازنده Intel Core i5-12400F از برند Intel با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "تعداد هسته": "6 هسته",
+        "تعداد رشته": "12 رشته",
+        "فرکانس پایه / بوست": "2.5 / 4.4 GHz",
+        "توان مصرفی (TDP)": "65W"
+      },
+      "rating": 4.6,
+      "reviews": 46,
+      "gallery": ""
+    },
+    {
+      "slug": "lg-27gn800-b",
+      "name": "LG UltraGear 27GN800-B",
+      "category": "monitor",
+      "brand": "LG",
+      "price": 11900000,
+      "discount": 0,
+      "stock": 0,
+      "sales": 98,
+      "image": "lg-27gn800-b.jpg",
+      "description": "مانیتور LG UltraGear 27GN800-B از برند LG با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "اندازه": "27 اینچ",
+        "رزولوشن": "2560x1440 (QHD)",
+        "نرخ بروزرسانی": "144Hz",
+        "پنل": "IPS"
+      },
+      "rating": 4.2,
+      "reviews": 59,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-vengeance-lpx-32gb-ddr4-3200",
+      "name": "Corsair Vengeance LPX 32GB (2x16GB) DDR4 3200MHz",
+      "category": "ram",
+      "brand": "Corsair",
+      "price": 4700000,
+      "discount": 10,
+      "stock": 10,
+      "sales": 209,
+      "image": "corsair-vengeance-lpx-32gb-ddr4-3200.jpg",
+      "description": "حافظه رم Corsair Vengeance LPX 32GB (2x16GB) DDR4 3200MHz از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR4",
+        "ظرفیت": "32GB",
+        "فرکانس": "3200MHz",
+        "تاخیر (CAS)": "CL16"
+      },
+      "rating": 4.9,
+      "reviews": 15,
+      "gallery": ""
+    },
+    {
+      "slug": "lian-li-lancool-216",
+      "name": "Lian Li LANCOOL 216",
+      "category": "case",
+      "brand": "Lian Li",
+      "price": 6900000,
+      "discount": 0,
+      "stock": 17,
+      "sales": 50,
+      "image": "lian-li-lancool-216.jpg",
+      "description": "کیس Lian Li LANCOOL 216 از برند Lian Li با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "Mid Tower",
+        "رنگ": "مشکی",
+        "پنل جانبی": "شیشه تمپرد",
+        "مادربرد سازگار": "ATX / mATX / ITX"
+      },
+      "rating": 4.5,
+      "reviews": 28,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-prime-h610m-k-d4",
+      "name": "ASUS PRIME H610M-K D4",
+      "category": "motherboard",
+      "brand": "ASUS",
+      "price": 3300000,
+      "discount": 5,
+      "stock": 6,
+      "sales": 161,
+      "image": "asus-prime-h610m-k-d4.jpg",
+      "description": "مادربورد ASUS PRIME H610M-K D4 از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "چیپست": "H610",
+        "سایز": "mATX",
+        "نوع رم": "DDR4"
+      },
+      "rating": 4.1,
+      "reviews": 41,
+      "gallery": ""
+    },
+    {
+      "slug": "lian-li-lancool-ii-mesh-c",
+      "name": "Lian Li LANCOOL II MESH C",
+      "category": "case",
+      "brand": "Lian Li",
+      "price": 7500000,
+      "discount": 0,
+      "stock": 13,
+      "sales": 272,
+      "image": "lian-li-lancool-ii-mesh-c.jpg",
+      "description": "کیس Lian Li LANCOOL II MESH C از برند Lian Li با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "Mid Tower",
+        "رنگ": "مشکی",
+        "پنل جانبی": "شیشه تمپرد",
+        "مادربرد سازگار": "ATX / mATX / ITX"
+      },
+      "rating": 4.8,
+      "reviews": 54,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-rog-strix-z790-e-gaming-wifi",
+      "name": "ASUS ROG STRIX Z790-E GAMING WIFI",
+      "category": "motherboard",
+      "brand": "ASUS",
+      "price": 21500000,
+      "discount": 0,
+      "stock": 2,
+      "sales": 113,
+      "image": "asus-rog-strix-z790-e-gaming-wifi.jpg",
+      "description": "مادربورد ASUS ROG STRIX Z790-E GAMING WIFI از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "چیپست": "Z790",
+        "سایز": "ATX",
+        "نوع رم": "DDR5"
+      },
+      "rating": 4.4,
+      "reviews": 10,
+      "gallery": ""
+    },
+    {
+      "slug": "lg-27gp850-b",
+      "name": "LG UltraGear 27GP850-B",
+      "category": "monitor",
+      "brand": "LG",
+      "price": 15500000,
+      "discount": 15,
+      "stock": 9,
+      "sales": 224,
+      "image": "lg-27gp850-b.jpg",
+      "description": "مانیتور LG UltraGear 27GP850-B از برند LG با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "اندازه": "27 اینچ",
+        "رزولوشن": "2560x1440 (QHD)",
+        "نرخ بروزرسانی": "165Hz",
+        "پنل": "Nano IPS"
+      },
+      "rating": 4.0,
+      "reviews": 23,
+      "gallery": ""
+    },
+    {
+      "slug": "cooler-master-masterair-ma612-stealth",
+      "name": "Cooler Master MasterAir MA612 Stealth",
+      "category": "cooler",
+      "brand": "Cooler Master",
+      "price": 3400000,
+      "discount": 0,
+      "stock": 16,
+      "sales": 65,
+      "image": "cooler-master-masterair-ma612-stealth.jpg",
+      "description": "خنک‌کننده Cooler Master MasterAir MA612 Stealth از برند Cooler Master با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "هوایی",
+        "اندازه": "دو فن 120mm",
+        "سوکت سازگار": "Intel / AMD"
+      },
+      "rating": 4.7,
+      "reviews": 36,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-mpg-a1000g-pcie5",
+      "name": "MSI MPG A1000G PCIE5",
+      "category": "psu",
+      "brand": "MSI",
+      "price": 11500000,
+      "discount": 0,
+      "stock": 5,
+      "sales": 176,
+      "image": "msi-mpg-a1000g-pcie5.jpg",
+      "description": "منبع تغذیه MSI MPG A1000G PCIE5 از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "توان": "1000W",
+        "گواهی بازدهی": "80 Plus Gold",
+        "نوع کابل": "تمام‌ماژولار"
+      },
+      "rating": 4.3,
+      "reviews": 49,
+      "gallery": ""
+    },
+    {
+      "slug": "gigabyte-rtx-4060-gaming-oc",
+      "name": "Gigabyte GeForce RTX 4060 GAMING OC 8G",
+      "category": "gpu",
+      "brand": "Gigabyte",
+      "price": 16900000,
+      "discount": 20,
+      "stock": 0,
+      "sales": 17,
+      "image": "gigabyte-rtx-4060-gaming-oc.jpg",
+      "description": "کارت گرافیک Gigabyte GeForce RTX 4060 GAMING OC 8G از برند Gigabyte با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce RTX 4060",
+        "حافظه": "8GB",
+        "نوع حافظه": "GDDR6",
+        "توان مصرفی": "115W"
+      },
+      "rating": 3.9,
+      "reviews": 5,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-gtx-1650-ventus-xs-oc",
+      "name": "MSI GeForce GTX 1650 D6 VENTUS XS OC",
+      "category": "gpu",
+      "brand": "MSI",
+      "price": 6900000,
+      "discount": 0,
+      "stock": 19,
+      "sales": 128,
+      "image": "msi-gtx-1650-ventus-xs-oc.jpg",
+      "description": "کارت گرافیک MSI GeForce GTX 1650 D6 VENTUS XS OC از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce GTX 1650",
+        "حافظه": "4GB",
+        "نوع حافظه": "GDDR6",
+        "توان مصرفی": "75W"
+      },
+      "rating": 4.6,
+      "reviews": 18,
+      "gallery": ""
+    },
+    {
+      "slug": "intel-core-i9-14900k",
+      "name": "Intel Core i9-14900K",
+      "category": "cpu",
+      "brand": "Intel",
+      "price": 34500000,
+      "discount": 0,
+      "stock": 8,
+      "sales": 239,
+      "image": "intel-core-i9-14900k.jpg",
+      "description": "پردازنده Intel Core i9-14900K از برند Intel با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "تعداد هسته": "24 هسته",
+        "تعداد رشته": "32 رشته",
+        "فرکانس پایه / بوست": "3.2 / 6.0 GHz",
+        "توان مصرفی (TDP)": "125W"
+      },
+      "rating": 4.2,
+      "reviews": 31,
+      "gallery": ""
+    },
+    {
+      "slug": "seagate-barracuda-2tb",
+      "name": "Seagate BarraCuda 2TB 7200RPM",
+      "category": "storage",
+      "brand": "Seagate",
+      "price": 4600000,
+      "discount": 0,
+      "stock": 15,
+      "sales": 80,
+      "image": "seagate-barracuda-2tb.jpg",
+      "description": "حافظه ذخیره‌سازی Seagate BarraCuda 2TB 7200RPM از برند Seagate با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "2TB",
+        "نوع": "HDD",
+        "رابط": "SATA III",
+        "سرعت خواندن": "220MB/s"
+      },
+      "rating": 4.9,
+      "reviews": 44,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-rm750e",
+      "name": "Corsair RM750e",
+      "category": "psu",
+      "brand": "Corsair",
+      "price": 6300000,
+      "discount": 10,
+      "stock": 4,
+      "sales": 191,
+      "image": "corsair-rm750e.jpg",
+      "description": "منبع تغذیه Corsair RM750e از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "توان": "750W",
+        "گواهی بازدهی": "80 Plus Gold",
+        "نوع کابل": "تمام‌ماژولار"
+      },
+      "rating": 4.5,
+      "reviews": 57,
+      "gallery": ""
+    },
+    {
+      "slug": "kingston-nv2-1tb",
+      "name": "Kingston NV2 1TB NVMe M.2",
+      "category": "storage",
+      "brand": "Kingston",
+      "price": 4100000,
+      "discount": 0,
+      "stock": 11,
+      "sales": 32,
+      "image": "kingston-nv2-1tb.jpg",
+      "description": "حافظه ذخیره‌سازی Kingston NV2 1TB NVMe M.2 از برند Kingston با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "1TB",
+        "نوع": "SSD NVMe",
+        "رابط": "PCIe 4.0 x4",
+        "سرعت خواندن": "3500MB/s"
+      },
+      "rating": 4.1,
+      "reviews": 13,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-hx1200",
+      "name": "Corsair HX1200",
+      "category": "psu",
+      "brand": "Corsair",
+      "price": 15800000,
+      "discount": 5,
+      "stock": 18,
+      "sales": 143,
+      "image": "corsair-hx1200.jpg",
+      "description": "منبع تغذیه Corsair HX1200 از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "توان": "1200W",
+        "گواهی بازدهی": "80 Plus Platinum",
+        "نوع کابل": "تمام‌ماژولار"
+      },
+      "rating": 4.8,
+      "reviews": 26,
+      "gallery": ""
+    },
+    {
+      "slug": "nzxt-kraken-x63",
+      "name": "NZXT Kraken X63",
+      "category": "cooler",
+      "brand": "NZXT",
+      "price": 9500000,
+      "discount": 0,
+      "stock": 7,
+      "sales": 254,
+      "image": "nzxt-kraken-x63.jpg",
+      "description": "خنک‌کننده NZXT Kraken X63 از برند NZXT با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "مایع",
+        "اندازه": "رادیاتور 280mm",
+        "سوکت سازگار": "Intel / AMD"
+      },
+      "rating": 4.4,
+      "reviews": 39,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-cv650",
+      "name": "Corsair CV650",
+      "category": "psu",
+      "brand": "Corsair",
+      "price": 3100000,
+      "discount": 0,
+      "stock": 14,
+      "sales": 95,
+      "image": "corsair-cv650.jpg",
+      "description": "منبع تغذیه Corsair CV650 از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "توان": "650W",
+        "گواهی بازدهی": "80 Plus Bronze",
+        "نوع کابل": "غیرماژولار"
+      },
+      "rating": 4.0,
+      "reviews": 52,
+      "gallery": ""
+    },
+    {
+      "slug": "nvidia-rtx-4070-super-founders",
+      "name": "NVIDIA GeForce RTX 4070 SUPER Founders Edition",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "price": 37500000,
+      "discount": 15,
+      "stock": 0,
+      "sales": 206,
+      "image": "nvidia-rtx-4070-super-founders.jpg",
+      "description": "کارت گرافیک NVIDIA GeForce RTX 4070 SUPER Founders Edition از برند NVIDIA با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce RTX 4070 SUPER",
+        "حافظه": "12GB",
+        "نوع حافظه": "GDDR6X",
+        "توان مصرفی": "220W"
+      },
+      "rating": 4.7,
+      "reviews": 8,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-mag-b650-tomahawk-wifi",
+      "name": "MSI MAG B650 TOMAHAWK WIFI",
+      "category": "motherboard",
+      "brand": "MSI",
+      "price": 11900000,
+      "discount": 0,
+      "stock": 10,
+      "sales": 47,
+      "image": "msi-mag-b650-tomahawk-wifi.jpg",
+      "description": "مادربورد MSI MAG B650 TOMAHAWK WIFI از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM5",
+        "چیپست": "B650",
+        "سایز": "ATX",
+        "نوع رم": "DDR5"
+      },
+      "rating": 4.3,
+      "reviews": 21,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-g2412",
+      "name": "MSI G2412 23.8\"",
+      "category": "monitor",
+      "brand": "MSI",
+      "price": 5500000,
+      "discount": 0,
+      "stock": 17,
+      "sales": 158,
+      "image": "msi-g2412.jpg",
+      "description": "مانیتور MSI G2412 23.8\" از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "اندازه": "23.8 اینچ",
+        "رزولوشن": "1920x1080 (Full HD)",
+        "نرخ بروزرسانی": "170Hz",
+        "پنل": "IPS"
+      },
+      "rating": 3.9,
+      "reviews": 34,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-tuf-rtx-4070-ti-super-oc",
+      "name": "ASUS TUF Gaming GeForce RTX 4070 Ti SUPER OC 16GB",
+      "category": "gpu",
+      "brand": "ASUS",
+      "price": 48000000,
+      "discount": 20,
+      "stock": 6,
+      "sales": 269,
+      "image": "asus-tuf-rtx-4070-ti-super-oc.jpg",
+      "description": "کارت گرافیک ASUS TUF Gaming GeForce RTX 4070 Ti SUPER OC 16GB از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce RTX 4070 Ti SUPER",
+        "حافظه": "16GB",
+        "نوع حافظه": "GDDR6X",
+        "توان مصرفی": "285W"
+      },
+      "rating": 4.6,
+      "reviews": 47,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-tuf-gaming-b760-plus-wifi-d4",
+      "name": "ASUS TUF GAMING B760-PLUS WIFI D4",
+      "category": "motherboard",
+      "brand": "ASUS",
+      "price": 8900000,
+      "discount": 0,
+      "stock": 13,
+      "sales": 110,
+      "image": "asus-tuf-gaming-b760-plus-wifi-d4.jpg",
+      "description": "مادربورد ASUS TUF GAMING B760-PLUS WIFI D4 از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "چیپست": "B760",
+        "سایز": "ATX",
+        "نوع رم": "DDR4"
+      },
+      "rating": 4.2,
+      "reviews": 60,
+      "gallery": ""
+    },
+    {
+      "slug": "intel-core-i5-14600k",
+      "name": "Intel Core i5-14600K",
+      "category": "cpu",
+      "brand": "Intel",
+      "price": 16500000,
+      "discount": 0,
+      "stock": 2,
+      "sales": 221,
+      "image": "intel-core-i5-14600k.jpg",
+      "description": "پردازنده Intel Core i5-14600K از برند Intel با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "تعداد هسته": "14 هسته",
+        "تعداد رشته": "20 رشته",
+        "فرکانس پایه / بوست": "3.5 / 5.3 GHz",
+        "توان مصرفی (TDP)": "125W"
+      },
+      "rating": 4.9,
+      "reviews": 16,
+      "gallery": ""
+    },
+    {
+      "slug": "kingston-a400-480gb",
+      "name": "Kingston A400 480GB SATA SSD",
+      "category": "storage",
+      "brand": "Kingston",
+      "price": 2000000,
+      "discount": 0,
+      "stock": 9,
+      "sales": 62,
+      "image": "kingston-a400-480gb.jpg",
+      "description": "حافظه ذخیره‌سازی Kingston A400 480GB SATA SSD از برند Kingston با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "480GB",
+        "نوع": "SSD SATA",
+        "رابط": "SATA III",
+        "سرعت خواندن": "500MB/s"
+      },
+      "rating": 4.5,
+      "reviews": 29,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-vy249he",
+      "name": "ASUS Eye Care VY249HE 23.8\"",
+      "category": "monitor",
+      "brand": "ASUS",
+      "price": 4600000,
+      "discount": 10,
+      "stock": 16,
+      "sales": 173,
+      "image": "asus-vy249he.jpg",
+      "description": "مانیتور ASUS Eye Care VY249HE 23.8\" از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "اندازه": "23.8 اینچ",
+        "رزولوشن": "1920x1080 (Full HD)",
+        "نرخ بروزرسانی": "75Hz",
+        "پنل": "IPS"
+      },
+      "rating": 4.1,
+      "reviews": 42,
+      "gallery": ""
+    },
+    {
+      "slug": "samsung-870-evo-1tb",
+      "name": "Samsung 870 EVO 1TB SATA SSD",
+      "category": "storage",
+      "brand": "Samsung",
+      "price": 5400000,
+      "discount": 0,
+      "stock": 5,
+      "sales": 14,
+      "image": "samsung-870-evo-1tb.jpg",
+      "description": "حافظه ذخیره‌سازی Samsung 870 EVO 1TB SATA SSD از برند Samsung با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "1TB",
+        "نوع": "SSD SATA",
+        "رابط": "SATA III",
+        "سرعت خواندن": "560MB/s"
+      },
+      "rating": 4.8,
+      "reviews": 55,
+      "gallery": ""
+    },
+    {
+      "slug": "lg-34wp65c-b",
+      "name": "LG UltraWide 34WP65C-B",
+      "category": "monitor",
+      "brand": "LG",
+      "price": 16900000,
+      "discount": 5,
+      "stock": 0,
+      "sales": 125,
+      "image": "lg-34wp65c-b.jpg",
+      "description": "مانیتور LG UltraWide 34WP65C-B از برند LG با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "اندازه": "34 اینچ",
+        "رزولوشن": "3440x1440 (UWQHD)",
+        "نرخ بروزرسانی": "160Hz",
+        "پنل": "VA"
+      },
+      "rating": 4.4,
+      "reviews": 11,
+      "gallery": ""
+    },
+    {
+      "slug": "asus-dual-rtx-3050-oc-8g",
+      "name": "ASUS Dual GeForce RTX 3050 OC 8GB",
+      "category": "gpu",
+      "brand": "ASUS",
+      "price": 11500000,
+      "discount": 0,
+      "stock": 19,
+      "sales": 236,
+      "image": "asus-dual-rtx-3050-oc-8g.jpg",
+      "description": "کارت گرافیک ASUS Dual GeForce RTX 3050 OC 8GB از برند ASUS با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce RTX 3050",
+        "حافظه": "8GB",
+        "نوع حافظه": "GDDR6",
+        "توان مصرفی": "130W"
+      },
+      "rating": 4.0,
+      "reviews": 24,
+      "gallery": ""
+    },
+    {
+      "slug": "lg-27gr93u-b",
+      "name": "LG UltraGear 27GR93U-B",
+      "category": "monitor",
+      "brand": "LG",
+      "price": 25500000,
+      "discount": 0,
+      "stock": 8,
+      "sales": 77,
+      "image": "lg-27gr93u-b.jpg",
+      "description": "مانیتور LG UltraGear 27GR93U-B از برند LG با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "اندازه": "27 اینچ",
+        "رزولوشن": "3840x2160 (4K)",
+        "نرخ بروزرسانی": "144Hz",
+        "پنل": "IPS"
+      },
+      "rating": 4.7,
+      "reviews": 37,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-vengeance-32gb-ddr5-6000",
+      "name": "Corsair Vengeance 32GB (2x16GB) DDR5 6000MHz",
+      "category": "ram",
+      "brand": "Corsair",
+      "price": 7800000,
+      "discount": 15,
+      "stock": 15,
+      "sales": 188,
+      "image": "corsair-vengeance-32gb-ddr5-6000.jpg",
+      "description": "حافظه رم Corsair Vengeance 32GB (2x16GB) DDR5 6000MHz از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR5",
+        "ظرفیت": "32GB",
+        "فرکانس": "6000MHz",
+        "تاخیر (CAS)": "CL36"
+      },
+      "rating": 4.3,
+      "reviews": 50,
+      "gallery": ""
+    },
+    {
+      "slug": "samsung-990-pro-2tb",
+      "name": "Samsung 990 PRO 2TB NVMe M.2",
+      "category": "storage",
+      "brand": "Samsung",
+      "price": 11800000,
+      "discount": 0,
+      "stock": 4,
+      "sales": 29,
+      "image": "samsung-990-pro-2tb.jpg",
+      "description": "حافظه ذخیره‌سازی Samsung 990 PRO 2TB NVMe M.2 از برند Samsung با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "2TB",
+        "نوع": "SSD NVMe",
+        "رابط": "PCIe 4.0 x4",
+        "سرعت خواندن": "7450MB/s"
+      },
+      "rating": 3.9,
+      "reviews": 6,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-vengeance-rgb-pro-16gb-ddr4-3600",
+      "name": "Corsair Vengeance RGB PRO 16GB (2x8GB) DDR4 3600MHz",
+      "category": "ram",
+      "brand": "Corsair",
+      "price": 3300000,
+      "discount": 0,
+      "stock": 11,
+      "sales": 140,
+      "image": "corsair-vengeance-rgb-pro-16gb-ddr4-3600.jpg",
+      "description": "حافظه رم Corsair Vengeance RGB PRO 16GB (2x8GB) DDR4 3600MHz از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR4",
+        "ظرفیت": "16GB",
+        "فرکانس": "3600MHz",
+        "تاخیر (CAS)": "CL18"
+      },
+      "rating": 4.6,
+      "reviews": 19,
+      "gallery": ""
+    },
+    {
+      "slug": "nzxt-h5-flow",
+      "name": "NZXT H5 Flow",
+      "category": "case",
+      "brand": "NZXT",
+      "price": 4900000,
+      "discount": 20,
+      "stock": 18,
+      "sales": 251,
+      "image": "nzxt-h5-flow.jpg",
+      "description": "کیس NZXT H5 Flow از برند NZXT با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "Mid Tower",
+        "رنگ": "مشکی",
+        "پنل جانبی": "شیشه تمپرد",
+        "مادربرد سازگار": "ATX / mATX / ITX"
+      },
+      "rating": 4.2,
+      "reviews": 32,
+      "gallery": ""
+    },
+    {
+      "slug": "cooler-master-hyper-212-black-edition",
+      "name": "Cooler Master Hyper 212 Black Edition",
+      "category": "cooler",
+      "brand": "Cooler Master",
+      "price": 2000000,
+      "discount": 0,
+      "stock": 7,
+      "sales": 92,
+      "image": "cooler-master-hyper-212-black-edition.jpg",
+      "description": "خنک‌کننده Cooler Master Hyper 212 Black Edition از برند Cooler Master با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "هوایی",
+        "اندازه": "فن 120mm",
+        "سوکت سازگار": "Intel / AMD"
+      },
+      "rating": 4.9,
+      "reviews": 45,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-dominator-platinum-64gb-ddr5-6000",
+      "name": "Corsair Dominator Platinum RGB 64GB (2x32GB) DDR5 6000MHz",
+      "category": "ram",
+      "brand": "Corsair",
+      "price": 20500000,
+      "discount": 0,
+      "stock": 14,
+      "sales": 203,
+      "image": "corsair-dominator-platinum-64gb-ddr5-6000.jpg",
+      "description": "حافظه رم Corsair Dominator Platinum RGB 64GB (2x32GB) DDR5 6000MHz از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR5",
+        "ظرفیت": "64GB",
+        "فرکانس": "6000MHz",
+        "تاخیر (CAS)": "CL30"
+      },
+      "rating": 4.5,
+      "reviews": 58,
+      "gallery": ""
+    },
+    {
+      "slug": "cooler-master-mwe-gold-850-v2",
+      "name": "Cooler Master MWE Gold 850 V2 Full Modular",
+      "category": "psu",
+      "brand": "Cooler Master",
+      "price": 7400000,
+      "discount": 0,
+      "stock": 0,
+      "sales": 44,
+      "image": "cooler-master-mwe-gold-850-v2.jpg",
+      "description": "منبع تغذیه Cooler Master MWE Gold 850 V2 Full Modular از برند Cooler Master با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "توان": "850W",
+        "گواهی بازدهی": "80 Plus Gold",
+        "نوع کابل": "تمام‌ماژولار"
+      },
+      "rating": 4.1,
+      "reviews": 14,
+      "gallery": ""
+    },
+    {
+      "slug": "logitech-g733-lightspeed",
+      "name": "Logitech G733 LIGHTSPEED Wireless Headset",
+      "category": "accessories",
+      "brand": "Logitech",
+      "price": 9500000,
+      "discount": 10,
+      "stock": 10,
+      "sales": 155,
+      "image": "logitech-g733-lightspeed.jpg",
+      "description": "لوازم جانبی Logitech G733 LIGHTSPEED Wireless Headset از برند Logitech با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "هدست",
+        "اتصال": "بی‌سیم (Lightspeed)",
+        "درایور": "PRO-G 40mm"
+      },
+      "rating": 4.8,
+      "reviews": 27,
+      "gallery": ""
+    },
+    {
+      "slug": "kingston-fury-beast-16gb-ddr4-3200",
+      "name": "Kingston FURY Beast 16GB DDR4 3200MHz",
+      "category": "ram",
+      "brand": "Kingston",
+      "price": 2300000,
+      "discount": 0,
+      "stock": 17,
+      "sales": 266,
+      "image": "kingston-fury-beast-16gb-ddr4-3200.jpg",
+      "description": "حافظه رم Kingston FURY Beast 16GB DDR4 3200MHz از برند Kingston با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR4",
+        "ظرفیت": "16GB",
+        "فرکانس": "3200MHz",
+        "تاخیر (CAS)": "CL16"
+      },
+      "rating": 4.4,
+      "reviews": 40,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-4000d-airflow",
+      "name": "Corsair 4000D Airflow",
+      "category": "case",
+      "brand": "Corsair",
+      "price": 5900000,
+      "discount": 5,
+      "stock": 6,
+      "sales": 107,
+      "image": "corsair-4000d-airflow.jpg",
+      "description": "کیس Corsair 4000D Airflow از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "Mid Tower",
+        "رنگ": "مشکی",
+        "پنل جانبی": "شیشه تمپرد",
+        "مادربرد سازگار": "ATX / mATX / ITX"
+      },
+      "rating": 4.0,
+      "reviews": 53,
+      "gallery": ""
+    },
+    {
+      "slug": "kingston-valueram-8gb-ddr4-2666",
+      "name": "Kingston ValueRAM 8GB DDR4 2666MHz",
+      "category": "ram",
+      "brand": "Kingston",
+      "price": 1000000,
+      "discount": 0,
+      "stock": 13,
+      "sales": 218,
+      "image": "kingston-valueram-8gb-ddr4-2666.jpg",
+      "description": "حافظه رم Kingston ValueRAM 8GB DDR4 2666MHz از برند Kingston با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR4",
+        "ظرفیت": "8GB",
+        "فرکانس": "2666MHz",
+        "تاخیر (CAS)": "CL19"
+      },
+      "rating": 4.7,
+      "reviews": 9,
+      "gallery": ""
+    },
+    {
+      "slug": "logitech-g413-se",
+      "name": "Logitech G413 SE Mechanical Keyboard",
+      "category": "accessories",
+      "brand": "Logitech",
+      "price": 3800000,
+      "discount": 0,
+      "stock": 2,
+      "sales": 59,
+      "image": "logitech-g413-se.jpg",
+      "description": "لوازم جانبی Logitech G413 SE Mechanical Keyboard از برند Logitech با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "کیبورد",
+        "اتصال": "با سیم",
+        "سوئیچ": "Tactile مکانیکی"
+      },
+      "rating": 4.3,
+      "reviews": 22,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-rtx-4060-ti-ventus-2x",
+      "name": "MSI GeForce RTX 4060 Ti VENTUS 2X BLACK 8G OC",
+      "category": "gpu",
+      "brand": "MSI",
+      "price": 23500000,
+      "discount": 15,
+      "stock": 9,
+      "sales": 170,
+      "image": "msi-rtx-4060-ti-ventus-2x.jpg",
+      "description": "کارت گرافیک MSI GeForce RTX 4060 Ti VENTUS 2X BLACK 8G OC از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce RTX 4060 Ti",
+        "حافظه": "8GB",
+        "نوع حافظه": "GDDR6",
+        "توان مصرفی": "160W"
+      },
+      "rating": 3.9,
+      "reviews": 35,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-b550-a-pro",
+      "name": "MSI B550-A PRO",
+      "category": "motherboard",
+      "brand": "MSI",
+      "price": 5900000,
+      "discount": 0,
+      "stock": 16,
+      "sales": 11,
+      "image": "msi-b550-a-pro.jpg",
+      "description": "مادربورد MSI B550-A PRO از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM4",
+        "چیپست": "B550",
+        "سایز": "ATX",
+        "نوع رم": "DDR4"
+      },
+      "rating": 4.6,
+      "reviews": 48,
+      "gallery": ""
+    },
+    {
+      "slug": "lian-li-galahad-ii-trinity-240",
+      "name": "Lian Li Galahad II Trinity 240",
+      "category": "cooler",
+      "brand": "Lian Li",
+      "price": 8900000,
+      "discount": 0,
+      "stock": 5,
+      "sales": 122,
+      "image": "lian-li-galahad-ii-trinity-240.jpg",
+      "description": "خنک‌کننده Lian Li Galahad II Trinity 240 از برند Lian Li با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "مایع",
+        "اندازه": "رادیاتور 240mm",
+        "سوکت سازگار": "Intel / AMD"
+      },
+      "rating": 4.2,
+      "reviews": 4,
+      "gallery": ""
+    },
+    {
+      "slug": "nzxt-h9-flow",
+      "name": "NZXT H9 Flow",
+      "category": "case",
+      "brand": "NZXT",
+      "price": 10900000,
+      "discount": 20,
+      "stock": 0,
+      "sales": 233,
+      "image": "nzxt-h9-flow.jpg",
+      "description": "کیس NZXT H9 Flow از برند NZXT با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "Mid Tower",
+        "رنگ": "سفید",
+        "پنل جانبی": "شیشه تمپرد",
+        "مادربرد سازگار": "ATX / mATX / ITX"
+      },
+      "rating": 4.9,
+      "reviews": 17,
+      "gallery": ""
+    },
+    {
+      "slug": "kingston-fury-beast-8gb-ddr4-3200",
+      "name": "Kingston FURY Beast 8GB DDR4 3200MHz",
+      "category": "ram",
+      "brand": "Kingston",
+      "price": 1350000,
+      "discount": 0,
+      "stock": 19,
+      "sales": 74,
+      "image": "kingston-fury-beast-8gb-ddr4-3200.jpg",
+      "description": "حافظه رم Kingston FURY Beast 8GB DDR4 3200MHz از برند Kingston با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR4",
+        "ظرفیت": "8GB",
+        "فرکانس": "3200MHz",
+        "تاخیر (CAS)": "CL16"
+      },
+      "rating": 4.5,
+      "reviews": 30,
+      "gallery": ""
+    },
+    {
+      "slug": "intel-core-i5-13400f",
+      "name": "Intel Core i5-13400F",
+      "category": "cpu",
+      "brand": "Intel",
+      "price": 9800000,
+      "discount": 0,
+      "stock": 8,
+      "sales": 185,
+      "image": "intel-core-i5-13400f.jpg",
+      "description": "پردازنده Intel Core i5-13400F از برند Intel با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "تعداد هسته": "10 هسته",
+        "تعداد رشته": "16 رشته",
+        "فرکانس پایه / بوست": "2.5 / 4.6 GHz",
+        "توان مصرفی (TDP)": "65W"
+      },
+      "rating": 4.1,
+      "reviews": 43,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-mag-b760-tomahawk-wifi",
+      "name": "MSI MAG B760 TOMAHAWK WIFI",
+      "category": "motherboard",
+      "brand": "MSI",
+      "price": 10500000,
+      "discount": 0,
+      "stock": 15,
+      "sales": 26,
+      "image": "msi-mag-b760-tomahawk-wifi.jpg",
+      "description": "مادربورد MSI MAG B760 TOMAHAWK WIFI از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "چیپست": "B760",
+        "سایز": "ATX",
+        "نوع رم": "DDR5"
+      },
+      "rating": 4.8,
+      "reviews": 56,
+      "gallery": ""
+    },
+    {
+      "slug": "cooler-master-masterbox-mb520-argb",
+      "name": "Cooler Master MasterBox MB520 ARGB",
+      "category": "case",
+      "brand": "Cooler Master",
+      "price": 3600000,
+      "discount": 10,
+      "stock": 4,
+      "sales": 137,
+      "image": "cooler-master-masterbox-mb520-argb.jpg",
+      "description": "کیس Cooler Master MasterBox MB520 ARGB از برند Cooler Master با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "Mid Tower",
+        "رنگ": "مشکی",
+        "پنل جانبی": "شیشه تمپرد",
+        "مادربرد سازگار": "ATX / mATX / ITX"
+      },
+      "rating": 4.4,
+      "reviews": 12,
+      "gallery": ""
+    },
+    {
+      "slug": "logitech-g502-hero",
+      "name": "Logitech G502 HERO Gaming Mouse",
+      "category": "accessories",
+      "brand": "Logitech",
+      "price": 3900000,
+      "discount": 0,
+      "stock": 11,
+      "sales": 248,
+      "image": "logitech-g502-hero.jpg",
+      "description": "لوازم جانبی Logitech G502 HERO Gaming Mouse از برند Logitech با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "ماوس",
+        "اتصال": "با سیم",
+        "سنسور": "HERO 25K / 25600 DPI"
+      },
+      "rating": 4.0,
+      "reviews": 25,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-k70-rgb-pro",
+      "name": "Corsair K70 RGB PRO Mechanical Keyboard",
+      "category": "accessories",
+      "brand": "Corsair",
+      "price": 9200000,
+      "discount": 5,
+      "stock": 18,
+      "sales": 89,
+      "image": "corsair-k70-rgb-pro.jpg",
+      "description": "لوازم جانبی Corsair K70 RGB PRO Mechanical Keyboard از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "کیبورد",
+        "اتصال": "با سیم",
+        "سوئیچ": "Cherry MX Red"
+      },
+      "rating": 4.7,
+      "reviews": 38,
+      "gallery": ""
+    },
+    {
+      "slug": "logitech-mx-master-3s",
+      "name": "Logitech MX Master 3S Wireless Mouse",
+      "category": "accessories",
+      "brand": "Logitech",
+      "price": 8900000,
+      "discount": 0,
+      "stock": 7,
+      "sales": 200,
+      "image": "logitech-mx-master-3s.jpg",
+      "description": "لوازم جانبی Logitech MX Master 3S Wireless Mouse از برند Logitech با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "ماوس",
+        "اتصال": "بی‌سیم (Bluetooth / Bolt)",
+        "سنسور": "8000 DPI"
+      },
+      "rating": 4.3,
+      "reviews": 51,
+      "gallery": ""
+    },
+    {
+      "slug": "rtx-4070-msi-ventus",
+      "name": "MSI GeForce RTX 4070 VENTUS 2X 12G OC",
+      "category": "gpu",
+      "brand": "MSI",
+      "price": 32500000,
+      "discount": 0,
+      "stock": 14,
+      "sales": 41,
+      "image": "rtx-4070-msi-ventus.jpg",
+      "description": "کارت گرافیک MSI GeForce RTX 4070 VENTUS 2X 12G OC از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "GeForce RTX 4070",
+        "حافظه": "12GB",
+        "نوع حافظه": "GDDR6X",
+        "توان مصرفی": "200W"
+      },
+      "rating": 3.9,
+      "reviews": 7,
+      "gallery": ""
+    },
+    {
+      "slug": "gigabyte-z790-aorus-elite-ax",
+      "name": "Gigabyte Z790 AORUS ELITE AX",
+      "category": "motherboard",
+      "brand": "Gigabyte",
+      "price": 14900000,
+      "discount": 15,
+      "stock": 0,
+      "sales": 152,
+      "image": "gigabyte-z790-aorus-elite-ax.jpg",
+      "description": "مادربورد Gigabyte Z790 AORUS ELITE AX از برند Gigabyte با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "چیپست": "Z790",
+        "سایز": "ATX",
+        "نوع رم": "DDR5"
+      },
+      "rating": 4.6,
+      "reviews": 20,
+      "gallery": ""
+    },
+    {
+      "slug": "samsung-odyssey-g5-g55c-27",
+      "name": "Samsung Odyssey G5 G55C 27\"",
+      "category": "monitor",
+      "brand": "Samsung",
+      "price": 13900000,
+      "discount": 0,
+      "stock": 10,
+      "sales": 263,
+      "image": "samsung-odyssey-g5-g55c-27.jpg",
+      "description": "مانیتور Samsung Odyssey G5 G55C 27\" از برند Samsung با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "اندازه": "27 اینچ",
+        "رزولوشن": "2560x1440 (QHD)",
+        "نرخ بروزرسانی": "165Hz",
+        "پنل": "VA"
+      },
+      "rating": 4.2,
+      "reviews": 33,
+      "gallery": ""
+    },
+    {
+      "slug": "cooler-master-mwe-550-bronze-v2",
+      "name": "Cooler Master MWE 550 Bronze V2",
+      "category": "psu",
+      "brand": "Cooler Master",
+      "price": 2600000,
+      "discount": 0,
+      "stock": 17,
+      "sales": 104,
+      "image": "cooler-master-mwe-550-bronze-v2.jpg",
+      "description": "منبع تغذیه Cooler Master MWE 550 Bronze V2 از برند Cooler Master با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "توان": "550W",
+        "گواهی بازدهی": "80 Plus Bronze",
+        "نوع کابل": "غیرماژولار"
+      },
+      "rating": 4.9,
+      "reviews": 46,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-icue-h150i-elite-capellix",
+      "name": "Corsair iCUE H150i ELITE CAPELLIX",
+      "category": "cooler",
+      "brand": "Corsair",
+      "price": 12900000,
+      "discount": 20,
+      "stock": 6,
+      "sales": 215,
+      "image": "corsair-icue-h150i-elite-capellix.jpg",
+      "description": "خنک‌کننده Corsair iCUE H150i ELITE CAPELLIX از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "مایع",
+        "اندازه": "رادیاتور 360mm",
+        "سوکت سازگار": "Intel / AMD"
+      },
+      "rating": 4.5,
+      "reviews": 59,
+      "gallery": ""
+    },
+    {
+      "slug": "gigabyte-rx-7800-xt-gaming-oc",
+      "name": "Gigabyte Radeon RX 7800 XT GAMING OC 16G",
+      "category": "gpu",
+      "brand": "Gigabyte",
+      "price": 37900000,
+      "discount": 0,
+      "stock": 13,
+      "sales": 56,
+      "image": "gigabyte-rx-7800-xt-gaming-oc.jpg",
+      "description": "کارت گرافیک Gigabyte Radeon RX 7800 XT GAMING OC 16G از برند Gigabyte با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "Radeon RX 7800 XT",
+        "حافظه": "16GB",
+        "نوع حافظه": "GDDR6",
+        "توان مصرفی": "263W"
+      },
+      "rating": 4.1,
+      "reviews": 15,
+      "gallery": ""
+    },
+    {
+      "slug": "amd-ryzen-7-7800x3d",
+      "name": "AMD Ryzen 7 7800X3D",
+      "category": "cpu",
+      "brand": "AMD",
+      "price": 24500000,
+      "discount": 0,
+      "stock": 2,
+      "sales": 167,
+      "image": "amd-ryzen-7-7800x3d.jpg",
+      "description": "پردازنده AMD Ryzen 7 7800X3D از برند AMD با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM5",
+        "تعداد هسته": "8 هسته",
+        "تعداد رشته": "16 رشته",
+        "فرکانس پایه / بوست": "4.2 / 5.0 GHz",
+        "توان مصرفی (TDP)": "120W"
+      },
+      "rating": 4.8,
+      "reviews": 28,
+      "gallery": ""
+    },
+    {
+      "slug": "wd-blue-4tb-hdd",
+      "name": "WD Blue 4TB 5400RPM",
+      "category": "storage",
+      "brand": "WD",
+      "price": 8200000,
+      "discount": 0,
+      "stock": 9,
+      "sales": 8,
+      "image": "wd-blue-4tb-hdd.jpg",
+      "description": "حافظه ذخیره‌سازی WD Blue 4TB 5400RPM از برند WD با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "4TB",
+        "نوع": "HDD",
+        "رابط": "SATA III",
+        "سرعت خواندن": "180MB/s"
+      },
+      "rating": 4.4,
+      "reviews": 41,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-mag-a650bn",
+      "name": "MSI MAG A650BN",
+      "category": "psu",
+      "brand": "MSI",
+      "price": 3000000,
+      "discount": 10,
+      "stock": 16,
+      "sales": 119,
+      "image": "msi-mag-a650bn.jpg",
+      "description": "منبع تغذیه MSI MAG A650BN از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "توان": "650W",
+        "گواهی بازدهی": "80 Plus Bronze",
+        "نوع کابل": "غیرماژولار"
+      },
+      "rating": 4.0,
+      "reviews": 54,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-pro-b660m-a-ddr4",
+      "name": "MSI PRO B660M-A DDR4",
+      "category": "motherboard",
+      "brand": "MSI",
+      "price": 4800000,
+      "discount": 0,
+      "stock": 5,
+      "sales": 230,
+      "image": "msi-pro-b660m-a-ddr4.jpg",
+      "description": "مادربورد MSI PRO B660M-A DDR4 از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "چیپست": "B660",
+        "سایز": "mATX",
+        "نوع رم": "DDR4"
+      },
+      "rating": 4.7,
+      "reviews": 10,
+      "gallery": ""
+    },
+    {
+      "slug": "intel-core-i7-14700k",
+      "name": "Intel Core i7-14700K",
+      "category": "cpu",
+      "brand": "Intel",
+      "price": 24800000,
+      "discount": 5,
+      "stock": 0,
+      "sales": 71,
+      "image": "intel-core-i7-14700k.jpg",
+      "description": "پردازنده Intel Core i7-14700K از برند Intel با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "تعداد هسته": "20 هسته",
+        "تعداد رشته": "28 رشته",
+        "فرکانس پایه / بوست": "3.4 / 5.6 GHz",
+        "توان مصرفی (TDP)": "125W"
+      },
+      "rating": 4.3,
+      "reviews": 23,
+      "gallery": ""
+    },
+    {
+      "slug": "msi-rx-7700-xt-gaming",
+      "name": "MSI Radeon RX 7700 XT GAMING 12G",
+      "category": "gpu",
+      "brand": "MSI",
+      "price": 29500000,
+      "discount": 0,
+      "stock": 19,
+      "sales": 182,
+      "image": "msi-rx-7700-xt-gaming.jpg",
+      "description": "کارت گرافیک MSI Radeon RX 7700 XT GAMING 12G از برند MSI با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "چیپست": "Radeon RX 7700 XT",
+        "حافظه": "12GB",
+        "نوع حافظه": "GDDR6",
+        "توان مصرفی": "245W"
+      },
+      "rating": 3.9,
+      "reviews": 36,
+      "gallery": ""
+    },
+    {
+      "slug": "cooler-master-nr200p",
+      "name": "Cooler Master NR200P",
+      "category": "case",
+      "brand": "Cooler Master",
+      "price": 5400000,
+      "discount": 0,
+      "stock": 8,
+      "sales": 23,
+      "image": "cooler-master-nr200p.jpg",
+      "description": "کیس Cooler Master NR200P از برند Cooler Master با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "Mini-ITX",
+        "رنگ": "مشکی",
+        "پنل جانبی": "شیشه تمپرد",
+        "مادربرد سازگار": "ITX"
+      },
+      "rating": 4.6,
+      "reviews": 49,
+      "gallery": ""
+    },
+    {
+      "slug": "amd-ryzen-5-7600",
+      "name": "AMD Ryzen 5 7600",
+      "category": "cpu",
+      "brand": "AMD",
+      "price": 10900000,
+      "discount": 15,
+      "stock": 15,
+      "sales": 134,
+      "image": "amd-ryzen-5-7600.jpg",
+      "description": "پردازنده AMD Ryzen 5 7600 از برند AMD با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM5",
+        "تعداد هسته": "6 هسته",
+        "تعداد رشته": "12 رشته",
+        "فرکانس پایه / بوست": "3.8 / 5.1 GHz",
+        "توان مصرفی (TDP)": "65W"
+      },
+      "rating": 4.2,
+      "reviews": 5,
+      "gallery": ""
+    },
+    {
+      "slug": "corsair-icue-h100i-elite-capellix",
+      "name": "Corsair iCUE H100i ELITE CAPELLIX",
+      "category": "cooler",
+      "brand": "Corsair",
+      "price": 9800000,
+      "discount": 0,
+      "stock": 4,
+      "sales": 245,
+      "image": "corsair-icue-h100i-elite-capellix.jpg",
+      "description": "خنک‌کننده Corsair iCUE H100i ELITE CAPELLIX از برند Corsair با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "مایع",
+        "اندازه": "رادیاتور 240mm",
+        "سوکت سازگار": "Intel / AMD"
+      },
+      "rating": 4.9,
+      "reviews": 18,
+      "gallery": ""
+    },
+    {
+      "slug": "samsung-980-500gb",
+      "name": "Samsung 980 500GB NVMe M.2",
+      "category": "storage",
+      "brand": "Samsung",
+      "price": 2700000,
+      "discount": 0,
+      "stock": 11,
+      "sales": 86,
+      "image": "samsung-980-500gb.jpg",
+      "description": "حافظه ذخیره‌سازی Samsung 980 500GB NVMe M.2 از برند Samsung با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "500GB",
+        "نوع": "SSD NVMe",
+        "رابط": "PCIe 3.0 x4",
+        "سرعت خواندن": "3100MB/s"
+      },
+      "rating": 4.5,
+      "reviews": 31,
+      "gallery": ""
+    },
+    {
+      "slug": "gigabyte-b760m-ds3h-ddr4",
+      "name": "Gigabyte B760M DS3H DDR4",
+      "category": "motherboard",
+      "brand": "Gigabyte",
+      "price": 5600000,
+      "discount": 20,
+      "stock": 18,
+      "sales": 197,
+      "image": "gigabyte-b760m-ds3h-ddr4.jpg",
+      "description": "مادربورد Gigabyte B760M DS3H DDR4 از برند Gigabyte با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "LGA1700",
+        "چیپست": "B760",
+        "سایز": "mATX",
+        "نوع رم": "DDR4"
+      },
+      "rating": 4.1,
+      "reviews": 44,
+      "gallery": ""
+    },
+    {
+      "slug": "lian-li-o11-dynamic-evo",
+      "name": "Lian Li O11 Dynamic EVO",
+      "category": "case",
+      "brand": "Lian Li",
+      "price": 9800000,
+      "discount": 0,
+      "stock": 7,
+      "sales": 38,
+      "image": "lian-li-o11-dynamic-evo.jpg",
+      "description": "کیس Lian Li O11 Dynamic EVO از برند Lian Li با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "Mid Tower",
+        "رنگ": "مشکی",
+        "پنل جانبی": "شیشه تمپرد",
+        "مادربرد سازگار": "E-ATX / ATX / mATX"
+      },
+      "rating": 4.8,
+      "reviews": 57,
+      "gallery": ""
+    },
+    {
+      "slug": "amd-ryzen-9-7950x",
+      "name": "AMD Ryzen 9 7950X",
+      "category": "cpu",
+      "brand": "AMD",
+      "price": 31000000,
+      "discount": 0,
+      "stock": 14,
+      "sales": 149,
+      "image": "amd-ryzen-9-7950x.jpg",
+      "description": "پردازنده AMD Ryzen 9 7950X از برند AMD با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM5",
+        "تعداد هسته": "16 هسته",
+        "تعداد رشته": "32 رشته",
+        "فرکانس پایه / بوست": "4.5 / 5.7 GHz",
+        "توان مصرفی (TDP)": "170W"
+      },
+      "rating": 4.4,
+      "reviews": 13,
+      "gallery": ""
+    },
+    {
+      "slug": "amd-ryzen-5-5600",
+      "name": "AMD Ryzen 5 5600",
+      "category": "cpu",
+      "brand": "AMD",
+      "price": 5600000,
+      "discount": 0,
+      "stock": 0,
+      "sales": 260,
+      "image": "amd-ryzen-5-5600.jpg",
+      "description": "پردازنده AMD Ryzen 5 5600 از برند AMD با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM4",
+        "تعداد هسته": "6 هسته",
+        "تعداد رشته": "12 رشته",
+        "فرکانس پایه / بوست": "3.5 / 4.4 GHz",
+        "توان مصرفی (TDP)": "65W"
+      },
+      "rating": 4.0,
+      "reviews": 26,
+      "gallery": ""
+    },
+    {
+      "slug": "lg-45gr95qe-b",
+      "name": "LG UltraGear 45GR95QE-B",
+      "category": "monitor",
+      "brand": "LG",
+      "price": 65000000,
+      "discount": 10,
+      "stock": 10,
+      "sales": 101,
+      "image": "lg-45gr95qe-b.jpg",
+      "description": "مانیتور LG UltraGear 45GR95QE-B از برند LG با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "اندازه": "45 اینچ",
+        "رزولوشن": "3440x1440 (UWQHD)",
+        "نرخ بروزرسانی": "240Hz",
+        "پنل": "OLED"
+      },
+      "rating": 4.7,
+      "reviews": 39,
+      "gallery": ""
+    },
+    {
+      "slug": "samsung-980-pro-1tb",
+      "name": "Samsung 980 PRO 1TB NVMe M.2",
+      "category": "storage",
+      "brand": "Samsung",
+      "price": 6200000,
+      "discount": 0,
+      "stock": 17,
+      "sales": 212,
+      "image": "samsung-980-pro-1tb.jpg",
+      "description": "حافظه ذخیره‌سازی Samsung 980 PRO 1TB NVMe M.2 از برند Samsung با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "ظرفیت": "1TB",
+        "نوع": "SSD NVMe",
+        "رابط": "PCIe 4.0 x4",
+        "سرعت خواندن": "7000MB/s"
+      },
+      "rating": 4.3,
+      "reviews": 52,
+      "gallery": ""
+    },
+    {
+      "slug": "gigabyte-b650m-ds3h",
+      "name": "Gigabyte B650M DS3H",
+      "category": "motherboard",
+      "brand": "Gigabyte",
+      "price": 7900000,
+      "discount": 5,
+      "stock": 6,
+      "sales": 53,
+      "image": "gigabyte-b650m-ds3h.jpg",
+      "description": "مادربورد Gigabyte B650M DS3H از برند Gigabyte با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "سوکت": "AM5",
+        "چیپست": "B650",
+        "سایز": "mATX",
+        "نوع رم": "DDR5"
+      },
+      "rating": 3.9,
+      "reviews": 8,
+      "gallery": ""
+    },
+    {
+      "slug": "kingston-fury-renegade-32gb-ddr5-6000",
+      "name": "Kingston FURY Renegade 32GB (2x16GB) DDR5 6000MHz",
+      "category": "ram",
+      "brand": "Kingston",
+      "price": 8900000,
+      "discount": 0,
+      "stock": 13,
+      "sales": 164,
+      "image": "kingston-fury-renegade-32gb-ddr5-6000.jpg",
+      "description": "حافظه رم Kingston FURY Renegade 32GB (2x16GB) DDR5 6000MHz از برند Kingston با ضمانت اصالت و سلامت فیزیکی کالا.",
+      "specs": {
+        "نوع": "DDR5",
+        "ظرفیت": "32GB",
+        "فرکانس": "6000MHz",
+        "تاخیر (CAS)": "CL32"
+      },
+      "rating": 4.6,
+      "reviews": 21,
+      "gallery": ""
+    }
+  ]
+}

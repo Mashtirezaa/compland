@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static shop_tags %}
+{% block title %}مقایسه کالاها{% endblock %}
+{% block content %}
+<div class="container">
+  <p class="breadcrumb"><a href="{% url 'home' %}">خانه</a> / مقایسه کالاها</p>
+  <h1 class="page-title">مقایسه کالاها</h1>
+
+  {% if products %}
+  <div class="table-wrap">
+    <table class="compare">
+      <tr>
+        <th></th>
+        {% for p in products %}
+        <td class="head">
+          {% if p.image_url %}
+            <img src="{{ p.image_url }}" alt="{{ p.name }}">
+          {% else %}
+            <img src="{% static 'img/placeholder.svg' %}" alt="">
+          {% endif %}
+          <a href="{% url 'product' p.slug %}">{{ p.name }}</a>
+          <strong>{{ p.final_price|toman }} تومان</strong>
+          <span class="muted">{% if p.in_stock %}موجود{% else %}ناموجود{% endif %}</span>
+          <form method="post" action="{% url 'compare_toggle' p.id %}">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{% url 'compare' %}">
+            <button class="link">حذف</button>
+          </form>
+        </td>
+        {% endfor %}
+      </tr>
+      {% for key, values, differs in rows %}
+      <tr {% if differs %}class="diff"{% endif %}>
+        <th>{{ key }}</th>
+        {% for v in values %}<td>{{ v }}</td>{% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <p class="muted">ردیف‌های هایلایت‌شده، ویژگی‌هایی هستند که بین کالاها تفاوت دارند.</p>
+  {% else %}
+  <div class="empty">هنوز کالایی برای مقایسه انتخاب نکرده‌اید. در صفحه هر محصول روی «افزودن به مقایسه» بزنید.</div>
+  {% endif %}
+</div>
+{% endblock %}

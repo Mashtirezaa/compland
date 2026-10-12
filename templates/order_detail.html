@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load shop_tags %}
+{% block title %}سفارش شماره {{ order.id|fa }}{% endblock %}
+{% block content %}
+<style>
+  .footer { display: none !important; }
+  .order-page { padding-bottom: 24px; }
+  .order-page .page-title { margin: 4px 0 14px; font-size: 1.2rem; }
+  .order-page .breadcrumb { margin: 8px 0 0; }
+  .order-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+  .order-layout > .box { margin: 0; padding: 16px 18px; border-radius: 16px; }
+  .order-layout .box h3 { margin-bottom: 10px; font-size: 1rem; }
+  .info-list { display: grid; gap: 8px; }
+  .info-list div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: .92rem; }
+  .info-list div:last-child { border-bottom: 0; }
+  .info-list span { color: var(--muted); flex: none; }
+  .order-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+  .order-fields .field { margin: 0; }
+  .order-fields .field:nth-child(3),
+  .order-fields .field:nth-child(5) { grid-column: 1 / -1; }
+  .order-fields textarea { height: 64px; resize: none; }
+  .order-page .btn.block { margin-top: 10px; }
+  @media (max-width: 900px) {
+    .order-layout, .order-fields { grid-template-columns: 1fr; }
+  }
+</style>
+<div class="container order-page">
+  <p class="breadcrumb">
+    <a href="{% url 'home' %}">خانه</a> /
+    <a href="{% url 'accounts:profile' %}">پنل کاربری</a> /
+    سفارش شماره {{ order.id|fa }}
+  </p>
+  <div class="page-head">
+    <h1 class="page-title">سفارش شماره {{ order.id|fa }}</h1>
+    <span class="status {{ order.status }}">{{ order.get_status_display }}</span>
+  </div>
+
+  <div class="order-layout">
+    <div class="box">
+      <h3>اقلام سفارش</h3>
+      <ul class="order-items">
+        {% for i in order.items.all %}
+          <li>
+            <span>{{ i.name }} × {{ i.quantity|fa }}</span>
+            <span class="muted">{{ i.total|toman }} تومان</span>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="summary-row total"><span>جمع کل</span><strong>{{ order.total|toman }} تومان</strong></div>
+      <p class="muted">تاریخ ثبت: {{ order.created_at|date:"Y/m/d H:i" }}</p>
+    </div>
+
+    <div class="box">
+      <h3>اطلاعات گیرنده</h3>
+      {% if form %}
+        <form method="post">
+          {% csrf_token %}
+          <div class="order-fields">
+            {% include 'partials/form_fields.html' %}
+          </div>
+          <p class="muted">این سفارش هنوز نهایی نشده و می‌توانی نشانی و تماس را تغییر بدهی.</p>
+          <button class="btn block">ذخیره تغییرات</button>
+        </form>
+        <form method="post" action="{% url 'orders:cancel' order.id %}" data-confirm="از لغو این سفارش مطمئن هستید؟">
+          {% csrf_token %}
+          <button class="btn btn-outline block">لغو سفارش</button>
+        </form>
+      {% else %}
+        <div class="info-list">
+          <div><span>نام</span>{{ order.full_name }}</div>
+          <div><span>شماره تماس</span>{{ order.phone }}</div>
+          <div><span>نشانی</span>{{ order.address }}</div>
+          <div><span>کد پستی</span>{{ order.postal_code }}</div>
+          {% if order.note %}<div><span>توضیحات</span>{{ order.note }}</div>{% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

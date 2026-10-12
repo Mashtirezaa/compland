@@ -1,0 +1,45 @@
+{% load static shop_tags %}
+<div class="card">
+  <a class="card-img" href="{% url 'product' p.slug %}">
+    {% if p.image_url %}
+      <img src="{{ p.image_url }}" alt="{{ p.name }}" loading="lazy">
+    {% else %}
+      <img src="{% static 'img/placeholder.svg' %}" alt="{{ p.name }}" loading="lazy">
+    {% endif %}
+    {% if p.discount and p.stock %}<span class="badge discount">{{ p.discount|fa }}٪</span>{% endif %}
+    {% if not p.stock %}<span class="badge out">ناموجود</span>{% endif %}
+  </a>
+  <div class="card-body">
+    <span class="brand">{{ p.brand.name }}</span>
+    <a class="card-title" href="{% url 'product' p.slug %}">{{ p.name }}</a>
+
+    <div class="rating">
+      <span class="rating-bar"><i style="width: {{ p.rating_percent }}%"></i></span>
+      <small>{{ p.rating }} ({{ p.reviews|fa }} نظر)</small>
+    </div>
+
+    <div class="price{% if not p.stock %} out{% endif %}">
+      {% if p.stock %}
+        <span class="current-price"><strong>{{ p.final_price|toman }}</strong> <small>تومان</small></span>
+        {% if p.discount %}<del>{{ p.price|toman }}</del>{% endif %}
+      {% else %}
+        <span class="current-price">ناموجود</span>
+      {% endif %}
+    </div>
+
+    <div class="card-actions">
+      <form method="post" action="{% url 'cart:add' p.id %}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <button class="btn btn-small block" {% if not p.stock %}disabled{% endif %}>افزودن به سبد</button>
+      </form>
+      <form method="post" action="{% url 'compare_toggle' p.id %}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <button class="btn btn-outline btn-small" title="افزودن به مقایسه">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

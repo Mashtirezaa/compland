@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static shop_tags %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block content %}
+<div class="container">
+  <p class="breadcrumb">
+    <a href="{% url 'home' %}">خانه</a> /
+    <a href="{% url 'category' product.category.slug %}">{{ product.category.name }}</a> /
+    {{ product.name }}
+  </p>
+
+  <div class="detail">
+    <div class="gallery">
+      <div class="main-img">
+        {% if product.image_url %}
+          <img id="main-img" src="{{ product.image_url }}" alt="{{ product.name }}">
+        {% else %}
+          <img id="main-img" src="{% static 'img/placeholder.svg' %}" alt="{{ product.name }}">
+        {% endif %}
+      </div>
+      {% if product.gallery_urls|length > 1 %}
+        <div class="thumbs">
+          {% for img in product.gallery_urls %}<img src="{{ img }}" alt="">{% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="info">
+      <span class="brand">{{ product.brand.name }}</span>
+      <h1>{{ product.name }}</h1>
+
+      <div class="rating">
+        <span class="rating-bar"><i style="width: {{ product.rating_percent }}%"></i></span>
+        <small>{{ product.rating }} از ۵ ({{ product.reviews|fa }} نظر)</small>
+      </div>
+
+      <ul class="key-specs">
+        {% for s in product.specs.all|slice:":4" %}<li><span>{{ s.key }}</span>{{ s.value }}</li>{% endfor %}
+      </ul>
+
+      <div class="price big">
+        {% if product.discount %}<del>{{ product.price|toman }}</del><span class="badge discount inline">{{ product.discount|fa }}٪</span>{% endif %}
+        <strong>{{ product.final_price|toman }}</strong> <small>تومان</small>
+      </div>
+
+      <p class="stock {% if product.in_stock %}in{% else %}out{% endif %}">
+        {% if product.in_stock %}موجود در انبار ({{ product.stock|fa }} عدد){% else %}ناموجود{% endif %}
+      </p>
+
+      <div class="buttons">
+        <form method="post" action="{% url 'cart:add' product.id %}" class="buy-form">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ request.get_full_path }}">
+          <input class="qty" type="number" name="qty" value="1" min="1" max="{{ product.stock|default:1 }}">
+          <button class="btn" {% if not product.in_stock %}disabled{% endif %}>افزودن به سبد خرید</button>
+        </form>
+        <form method="post" action="{% url 'compare_toggle' product.id %}">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ request.get_full_path }}">
+          <button class="btn btn-outline">{% if in_compare %}حذف از مقایسه{% else %}افزودن به مقایسه{% endif %}</button>
+        </form>
+      </div>
+
+      <div class="tags">
+        <span>ضمانت اصالت کالا</span>
+        <span>ارسال سریع</span>
+        <span>۷ روز مهلت بازگشت</span>
+        <span>پرداخت امن</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab-head">
+      <button class="tab-btn active" data-tab="specs">مشخصات فنی</button>
+      <button class="tab-btn" data-tab="desc">توضیحات</button>
+      <button class="tab-btn" data-tab="ship">ارسال و ضمانت</button>
+    </div>
+    <div class="tab-panel active" id="tab-specs">
+      <table class="specs">
+        {% for s in product.specs.all %}<tr><th>{{ s.key }}</th><td>{{ s.value }}</td></tr>{% endfor %}
+      </table>
+    </div>
+    <div class="tab-panel" id="tab-desc">
+      <p>{{ product.description }}</p>
+      <p class="muted">این کالا اورجینال و دارای گارانتی معتبر است. برای اطمینان از سازگاری قطعات با سیستم شما می‌توانید با پشتیبانی فنی فروشگاه تماس بگیرید.</p>
+    </div>
+    <div class="tab-panel" id="tab-ship">
+      <ul class="ship-list">
+        <li>ارسال به سراسر کشور با پست پیشتاز و تیپاکس</li>
+        <li>تحویل اکسپرس در تهران و کرج</li>
+        <li>گارانتی شرکتی و ضمانت سلامت فیزیکی کالا</li>
+        <li>امکان بازگشت کالا تا ۷ روز پس از تحویل</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <h2 class="section-title">محصولات مشابه</h2>
+    <a class="link" href="{% url 'category' product.category.slug %}">همه {{ product.category.name }}</a>
+  </div>
+  <div class="grid">{% for p in similar %}{% include 'partials/product_card.html' %}{% endfor %}</div>
+</div>
+{% endblock %}

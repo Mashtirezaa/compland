@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load shop_tags %}
+{% block title %}ثبت سفارش{% endblock %}
+{% block content %}
+<style>
+  .footer { display: none !important; }
+  body { overflow: hidden; }
+  main { padding-bottom: 0 !important; min-height: 0 !important; }
+  .checkout-page { height: calc(100dvh - 168px); max-height: calc(100dvh - 168px); display: flex; flex-direction: column; overflow: hidden; padding-bottom: 14px; box-sizing: border-box; }
+  .checkout-page .breadcrumb { margin: 8px 0 0; }
+  .checkout-page .page-title { margin: 4px 0 10px; font-size: 1.2rem; }
+  .checkout { flex: 1; min-height: 0; display: grid; grid-template-columns: 1.15fr .85fr; gap: 14px; }
+  .checkout > .box {
+    margin: 0;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #fff;
+  }
+  .checkout .box h3 { margin-bottom: 8px; font-size: 1rem; }
+  .checkout-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
+  .checkout-fields .field { margin: 0; }
+  .checkout-fields .field label { margin-bottom: 2px; font-size: .8rem; }
+  .checkout-fields .field input, .checkout-fields .field textarea { padding: 6px 10px; font-size: .9rem; }
+  .checkout-fields .field:nth-child(3) { grid-column: 1 / -1; }
+  .checkout textarea { height: 48px; resize: none; }
+  .checkout .muted { margin: 8px 0 0; font-size: .78rem; }
+  .checkout .box .btn.block { margin-top: 10px; padding: 8px 16px; }
+  .checkout .order-items { flex: 1; min-height: 0; overflow: auto; }
+  .checkout .summary-row.total { margin-top: auto; padding-top: 10px; }
+  @media (max-width: 900px) {
+    body { overflow: auto; }
+    .checkout-page { height: auto; max-height: none; overflow: visible; }
+    .checkout { display: block; }
+    .checkout > .box { margin-bottom: 14px; }
+    .checkout-fields { grid-template-columns: 1fr; }
+  }
+</style>
+<div class="container checkout-page">
+  <p class="breadcrumb"><a href="{% url 'home' %}">خانه</a> / <a href="{% url 'cart:detail' %}">سبد خرید</a> / ثبت سفارش</p>
+  <h1 class="page-title">ثبت سفارش</h1>
+  <div class="checkout">
+    <form method="post" class="box">
+      {% csrf_token %}
+      <h3>اطلاعات گیرنده</h3>
+      <div class="checkout-fields">
+        {% include 'partials/form_fields.html' %}
+      </div>
+      <p class="muted">پرداخت در این پروژه شبیه‌سازی شده است و درگاه واقعی وجود ندارد.</p>
+      <button class="btn block">پرداخت و ثبت سفارش</button>
+    </form>
+    <div class="box">
+      <h3>اقلام سفارش</h3>
+      <ul class="order-items">
+        {% for i in items %}
+          <li>
+            <span>{{ i.product.name }} × {{ i.qty|fa }}</span>
+            <span class="muted">{{ i.total|toman }} تومان</span>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="summary-row total"><span>جمع کل</span><strong>{{ total|toman }} تومان</strong></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

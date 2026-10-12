@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}ثبت‌نام{% endblock %}
+{% block content %}
+<style>
+  .footer { display: none !important; }
+  body { overflow: hidden; }
+  main { padding-bottom: 0 !important; min-height: 0 !important; }
+  .register-page {
+    height: calc(100dvh - 168px);
+    max-height: calc(100dvh - 168px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 14px;
+    box-sizing: border-box;
+  }
+  .register-page .box {
+    width: min(560px, 100%);
+    margin: 0;
+    padding: 18px 22px 16px;
+    border-radius: 16px;
+  }
+  .register-page h1 { font-size: 1.2rem; margin-bottom: 12px; text-align: center; }
+  .register-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; }
+  .register-fields .field { margin: 0; }
+  .register-fields .field label { margin-bottom: 2px; font-size: .8rem; }
+  .register-fields .field input { padding: 8px 12px; }
+  .register-fields .field:nth-child(3) { grid-column: 1 / -1; }
+  .register-page .btn.block { margin-top: 12px; }
+  .register-page .muted { margin-top: 8px; }
+  @media (max-width: 700px) {
+    body { overflow: auto; }
+    .register-page { height: auto; max-height: none; display: block; padding-top: 16px; }
+    .register-fields { grid-template-columns: 1fr; }
+  }
+</style>
+<div class="container register-page">
+  <form method="post" class="box">
+    {% csrf_token %}
+    <h1>ثبت‌نام</h1>
+    <input type="hidden" name="next" value="{{ next }}">
+    <div class="register-fields">
+      {% include 'partials/form_fields.html' %}
+    </div>
+    <button class="btn block">ساخت حساب</button>
+    <p class="muted center">قبلاً ثبت‌نام کرده‌اید؟ <a class="link" href="{% url 'accounts:login' %}{% if next %}?next={{ next|urlencode }}{% endif %}">ورود</a></p>
+  </form>
+</div>
+{% endblock %}

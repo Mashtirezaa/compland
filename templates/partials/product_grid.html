@@ -1,0 +1,20 @@
+{% load shop_tags %}
+<p class="result-count">{{ page.paginator.count|fa }} کالا</p>
+<div class="grid">
+  {% for p in page %}{% include 'partials/product_card.html' %}{% endfor %}
+</div>
+{% if not page.object_list %}<div class="empty">کالایی با این فیلترها پیدا نشد.</div>{% endif %}
+
+{% if page.paginator.num_pages > 1 %}
+<nav class="pagination">
+  {% if page.has_previous %}<a href="?{{ qs }}&page={{ page.previous_page_number }}" data-page="{{ page.previous_page_number }}">قبلی</a>{% endif %}
+  {% for n in page.paginator.page_range %}
+    {% if n == page.number %}
+      <span class="active">{{ n|fa }}</span>
+    {% elif n > page.number|add:"-3" and n < page.number|add:"3" %}
+      <a href="?{{ qs }}&page={{ n }}" data-page="{{ n }}">{{ n|fa }}</a>
+    {% endif %}
+  {% endfor %}
+  {% if page.has_next %}<a href="?{{ qs }}&page={{ page.next_page_number }}" data-page="{{ page.next_page_number }}">بعدی</a>{% endif %}
+</nav>
+{% endif %}

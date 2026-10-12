@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <rect width="240" height="240" fill="#f3f5f9"/>
+  <g fill="none" stroke="#c4cad8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="62" y="72" width="116" height="92" rx="12"/>
+    <circle cx="96" cy="104" r="10"/>
+    <path d="M70 152l32-34 24 26 18-18 26 28"/>
+  </g>
+  <text x="120" y="196" font-size="15" fill="#9aa3b5" text-anchor="middle" font-family="Tahoma, sans-serif">تصویر موجود نیست</text>
+</svg>
