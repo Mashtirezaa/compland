@@ -152,8 +152,8 @@ main { min-height: 70vh; padding-bottom: 60px; }
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: .25s; }
 .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: #dfe3ee; }
-.card-img { position: relative; background: #f7f8fc; aspect-ratio: 1; padding: 16px; display: flex; }
-.card-img img { width: 100%; height: 100%; object-fit: contain; transition: transform .3s; mix-blend-mode: multiply; }
+.card-img { position: relative; background: #f7f8fc; aspect-ratio: 1; overflow: hidden; }
+.card-img img { position: absolute; inset: 16px; width: auto; height: auto; max-width: calc(100% - 32px); max-height: calc(100% - 32px); margin: auto; object-fit: contain; object-position: center; transition: transform .3s; mix-blend-mode: multiply; }
 .card:hover .card-img img { transform: scale(1.05); }
 .badge { position: absolute; top: 12px; right: 12px; font-size: .75rem; padding: 3px 10px; border-radius: 20px; z-index: 1; font-weight: 600; }
 .badge.discount { background: var(--accent); color: #fff; }
@@ -210,8 +210,8 @@ main { min-height: 70vh; padding-bottom: 60px; }
 .pagination a:hover, .pagination .active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
 .detail { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px; }
-.main-img { background: #f7f8fc; border-radius: var(--radius); aspect-ratio: 1; padding: 26px; display: flex; }
-.main-img img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.main-img { position: relative; background: #f7f8fc; border-radius: var(--radius); aspect-ratio: 1; overflow: hidden; }
+.main-img img { position: absolute; inset: 26px; width: auto; height: auto; max-width: calc(100% - 52px); max-height: calc(100% - 52px); margin: auto; object-fit: contain; object-position: center; mix-blend-mode: multiply; }
 .thumbs { display: flex; gap: 10px; margin-top: 12px; }
 .thumbs img { width: 72px; height: 72px; object-fit: contain; background: #f7f8fc; border-radius: 12px; padding: 6px; border: 2px solid transparent; transition: .2s; }
 .thumbs img:hover { border-color: var(--primary); }
