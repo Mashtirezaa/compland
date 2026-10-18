@@ -84,7 +84,7 @@
             <strong>سفارش شماره {{ o.id|fa }}</strong>
             <span class="status {{ o.status }}">{{ o.get_status_display }}</span>
           </div>
-          <p class="muted">{{ o.created_at|date:"Y/m/d H:i" }}</p>
+          <p class="muted">{{ o.created_at|shamsi }}</p>
           <ul>{% for i in o.items.all %}<li>{{ i.name }} × {{ i.quantity|fa }}</li>{% endfor %}</ul>
           <div class="order-foot">
             <strong>{{ o.total|toman }} تومان</strong>

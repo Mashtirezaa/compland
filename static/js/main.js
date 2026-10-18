@@ -1,3 +1,10 @@
+const keepScroll = sessionStorage.getItem('keep-scroll');
+if (keepScroll !== null) {
+  sessionStorage.removeItem('keep-scroll');
+  history.scrollRestoration = 'manual';
+  window.scrollTo(0, Number(keepScroll));
+}
+
 const slider = document.getElementById('slider');
 if (slider) {
   const slides = slider.querySelectorAll('.slide');
@@ -101,3 +108,10 @@ if (confirmBox) {
     confirmBox.close();
   };
 }
+
+document.querySelectorAll('form').forEach((form) => {
+  if (!form.querySelector('input[name="next"]')) return;
+  form.addEventListener('submit', () => {
+    sessionStorage.setItem('keep-scroll', String(window.scrollY));
+  });
+});

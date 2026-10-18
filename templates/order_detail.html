@@ -20,6 +20,8 @@
   .order-fields .field:nth-child(5) { grid-column: 1 / -1; }
   .order-fields textarea { height: 64px; resize: none; }
   .order-page .btn.block { margin-top: 10px; }
+  .order-items a { color: var(--text); font-weight: 600; }
+  .order-items a:hover { color: var(--primary); }
   @media (max-width: 900px) {
     .order-layout, .order-fields { grid-template-columns: 1fr; }
   }
@@ -41,13 +43,20 @@
       <ul class="order-items">
         {% for i in order.items.all %}
           <li>
-            <span>{{ i.name }} × {{ i.quantity|fa }}</span>
+            <span>
+              {% if i.product %}
+                <a href="{% url 'product' i.product.slug %}">{{ i.name }}</a>
+              {% else %}
+                {{ i.name }}
+              {% endif %}
+              × {{ i.quantity|fa }}
+            </span>
             <span class="muted">{{ i.total|toman }} تومان</span>
           </li>
         {% endfor %}
       </ul>
       <div class="summary-row total"><span>جمع کل</span><strong>{{ order.total|toman }} تومان</strong></div>
-      <p class="muted">تاریخ ثبت: {{ order.created_at|date:"Y/m/d H:i" }}</p>
+      <p class="muted">تاریخ ثبت: {{ order.created_at|shamsi }}</p>
     </div>
 
     <div class="box">

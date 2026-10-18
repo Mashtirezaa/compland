@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from products.models import Brand, Category, Product, ProductSpec
+from products.models import Brand, Category, Product, ProductSpec, Review
 
 
 class ProductSpecInline(admin.TabularInline):
@@ -27,3 +27,9 @@ class CategoryAdmin(admin.ModelAdmin):
 class BrandAdmin(admin.ModelAdmin):
     list_display = ("name", "slug")
     prepopulated_fields = {"slug": ("name",)}
+
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ("product", "user", "rating", "is_buyer", "created_at")
+    list_filter = ("is_buyer",)

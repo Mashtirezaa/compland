@@ -52,7 +52,7 @@ def done(request, id):
 
 @login_required
 def detail(request, id):
-    order = get_object_or_404(Order.objects.prefetch_related("items"), id=id, user=request.user)
+    order = get_object_or_404(Order.objects.prefetch_related("items__product"), id=id, user=request.user)
     form = None
     if order.can_edit:
         form = OrderForm(request.POST or None, instance=order)

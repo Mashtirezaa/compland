@@ -15,7 +15,7 @@
 
     <div class="rating">
       <span class="rating-bar"><i style="width: {{ p.rating_percent }}%"></i></span>
-      <small>{{ p.rating }} ({{ p.reviews|fa }} نظر)</small>
+      <small>{{ p.rating|fa }} ({{ p.reviews|fa }} نظر)</small>
     </div>
 
     <div class="price{% if not p.stock %} out{% endif %}">

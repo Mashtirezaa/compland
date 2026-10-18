@@ -1,12 +1,16 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.db.models import Avg
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template.loader import render_to_string
 from django.views.decorators.http import require_POST
 
+from orders.models import OrderItem
 from products.filters import brand_filters, filter_products, spec_filters
-from products.models import Brand, Category, Product
+from products.forms import ReviewForm
+from products.models import Brand, Category, Product, Review
 
 
 def home(request):
@@ -55,11 +59,56 @@ def product_detail(request, slug):
     product = get_object_or_404(
         Product.objects.select_related("category", "brand").prefetch_related("specs"), slug=slug)
     similar = Product.objects.filter(category=product.category).exclude(id=product.id).select_related("brand")[:4]
+    comments = product.comments.select_related("user").exclude(text="")
+    is_buyer = False
+    has_rated = False
+    if request.user.is_authenticated:
+        is_buyer = OrderItem.objects.filter(
+            product=product, order__user=request.user).exclude(order__status="canceled").exists()
+        has_rated = product.comments.filter(user=request.user).exclude(rating=None).exists()
     return render(request, "product_detail.html", {
         "product": product,
         "similar": similar,
         "in_compare": product.id in request.session.get("compare", []),
+        "comments": comments,
+        "is_buyer": is_buyer,
+        "has_rated": has_rated,
+        "form": ReviewForm(),
     })
+
+
+@login_required
+@require_POST
+def add_review(request, slug):
+    product = get_object_or_404(Product, slug=slug)
+    form = ReviewForm(request.POST)
+    if not form.is_valid():
+        messages.error(request, "ثبت انجام نشد.")
+        return redirect(product.get_absolute_url())
+
+    is_buyer = OrderItem.objects.filter(
+        product=product, order__user=request.user).exclude(order__status="canceled").exists()
+    text = (form.cleaned_data.get("text") or "").strip()
+    raw = form.cleaned_data.get("rating")
+    has_rated = product.comments.filter(user=request.user).exclude(rating=None).exists()
+    rating = int(raw) if is_buyer and raw and not has_rated else None
+    if not text and not rating:
+        messages.error(request, "نمره یا نظر را وارد کنید.")
+        return redirect(product.get_absolute_url())
+
+    Review.objects.create(
+        product=product,
+        user=request.user,
+        text=text,
+        rating=rating,
+        is_buyer=is_buyer,
+    )
+    scored = product.comments.exclude(rating=None).aggregate(avg=Avg("rating"))
+    product.rating = round(scored["avg"] or 0, 1)
+    product.reviews = product.comments.exclude(text="").count()
+    product.save(update_fields=["rating", "reviews"])
+    messages.success(request, "ثبت شد.")
+    return redirect(product.get_absolute_url())
 
 
 def compare_list(request):

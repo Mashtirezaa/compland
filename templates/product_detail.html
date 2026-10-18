@@ -2,7 +2,49 @@
 {% load static shop_tags %}
 {% block title %}{{ product.name }}{% endblock %}
 {% block content %}
-<div class="container">
+<style>
+  .product-page .breadcrumb { margin: 8px 0 8px; }
+  .product-page .detail { padding: 12px 16px; gap: 16px; grid-template-columns: 280px 1fr; }
+  .product-page .main-img { aspect-ratio: 1; max-height: 280px; }
+  .product-page .thumbs img { width: 48px; height: 48px; }
+  .product-page .info h1 { font-size: 1.05rem; margin: 2px 0 6px; }
+  .product-page .key-specs { margin: 8px 0; }
+  .product-page .key-specs li { padding: 5px 10px; font-size: .82rem; }
+  .product-page .price.big { margin: 8px 0 4px; }
+  .product-page .price.big strong { font-size: 1.28rem; }
+  .product-page .stock { margin: 4px 0 10px; }
+  .product-page .tags { margin-top: 8px; }
+  .product-page .tags span { font-size: .72rem; padding: 2px 8px; }
+  .product-page .tabs { margin-top: 16px; }
+  .comment-box { margin-top: 18px; padding: 18px 20px; }
+  .comment-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+  .comment-head h3 { margin: 0; }
+  .comment-form { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 16px; }
+  .comment-form textarea { width: 100%; min-height: 84px; resize: none; border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; background: #fff; }
+  .comment-form .field { margin-bottom: 10px; }
+  .rate-picks { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .rate-picks span { font-size: .82rem; color: var(--muted); margin-left: 6px; }
+  .rate-picks label { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 10px; background: #fff; cursor: pointer; font-weight: 700; color: var(--star); }
+  .rate-picks input { display: none; }
+  .rate-picks label:has(input:checked) { background: var(--accent-soft); border-color: var(--star); }
+  .comment-list { display: flex; flex-direction: column; gap: 10px; }
+  .comment-list.is-long { max-height: 440px; overflow-y: auto; padding: 2px 8px 8px 2px; scrollbar-width: thin; scrollbar-color: #c5c9d4 transparent; }
+  .comment-list.is-long::-webkit-scrollbar { width: 6px; }
+  .comment-list.is-long::-webkit-scrollbar-thumb { background: #c5c9d4; border-radius: 8px; }
+  .comment { display: flex; gap: 12px; padding: 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary-soft); color: var(--primary-dark); display: grid; place-items: center; font-weight: 800; flex: none; }
+  .comment-body { flex: 1; min-width: 0; }
+  .comment-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  .buyer-tag { background: var(--success-soft); color: var(--success); font-size: .72rem; padding: 2px 8px; border-radius: 20px; font-weight: 700; }
+  .stars { color: #e7e9f0; letter-spacing: 1px; }
+  .stars .on { color: var(--star); }
+  .comment-body p { margin: 0; line-height: 1.8; }
+  @media (max-width: 900px) {
+    .product-page .detail { grid-template-columns: 1fr; }
+    .product-page .main-img { max-height: 240px; }
+  }
+</style>
+<div class="container product-page">
   <p class="breadcrumb">
     <a href="{% url 'home' %}">خانه</a> /
     <a href="{% url 'category' product.category.slug %}">{{ product.category.name }}</a> /
@@ -31,11 +73,11 @@
 
       <div class="rating">
         <span class="rating-bar"><i style="width: {{ product.rating_percent }}%"></i></span>
-        <small>{{ product.rating }} از ۵ ({{ product.reviews|fa }} نظر)</small>
+        <small>{{ product.rating|fa }} از ۵ ({{ product.reviews|fa }} نظر)</small>
       </div>
 
       <ul class="key-specs">
-        {% for s in product.specs.all|slice:":4" %}<li><span>{{ s.key }}</span>{{ s.value }}</li>{% endfor %}
+        {% for s in product.specs.all|slice:":3" %}<li><span>{{ s.key }}</span>{{ s.value }}</li>{% endfor %}
       </ul>
 
       <div class="price big">
@@ -59,13 +101,6 @@
           <input type="hidden" name="next" value="{{ request.get_full_path }}">
           <button class="btn btn-outline">{% if in_compare %}حذف از مقایسه{% else %}افزودن به مقایسه{% endif %}</button>
         </form>
-      </div>
-
-      <div class="tags">
-        <span>ضمانت اصالت کالا</span>
-        <span>ارسال سریع</span>
-        <span>۷ روز مهلت بازگشت</span>
-        <span>پرداخت امن</span>
       </div>
     </div>
   </div>
@@ -95,10 +130,74 @@
     </div>
   </div>
 
+  <div class="box comment-box">
+    <div class="comment-head">
+      <h3>نظر خریداران</h3>
+      <small class="muted">{{ comments|length|fa }} نظر</small>
+    </div>
+    {% if user.is_authenticated %}
+        <form method="post" action="{% url 'add_review' product.slug %}" class="comment-form">
+          {% csrf_token %}
+          {% if is_buyer and not has_rated %}
+            <div class="field">
+              <div class="rate-picks">
+                <span>نمره از ۵</span>
+                {% for n in "12345" %}
+                  <label><input type="radio" name="rating" value="{{ n }}">{{ n|fa }}</label>
+                {% endfor %}
+              </div>
+            </div>
+          {% elif is_buyer and has_rated %}
+            <p class="muted">نمره شما برای این کالا ثبت شده است.</p>
+          {% endif %}
+          <div class="field">
+            {{ form.text }}
+          </div>
+          <button class="btn btn-small">ثبت</button>
+        </form>
+    {% else %}
+      <p class="muted">برای ثبت نظر <a class="link" href="{% url 'accounts:login' %}">وارد حساب</a> شوید.</p>
+    {% endif %}
+
+    <div class="comment-list{% if comments|length > 5 %} is-long{% endif %}">
+    {% for c in comments %}
+      <div class="comment">
+        <div class="avatar">{{ c.user.username|slice:":1" }}</div>
+        <div class="comment-body">
+          <div class="comment-top">
+            <strong>{{ c.user.get_full_name|default:c.user.username }}</strong>
+            {% if c.is_buyer %}<span class="buyer-tag">خریدار</span>{% endif %}
+            {% if c.rating %}
+              <span class="stars">{% for n in "12345" %}<span class="{% if c.rating >= forloop.counter %}on{% endif %}">★</span>{% endfor %}</span>
+            {% endif %}
+            <small class="muted">{{ c.created_at|shamsi }}</small>
+          </div>
+          <p>{{ c.text }}</p>
+        </div>
+      </div>
+    {% empty %}
+      <p class="muted">هنوز نظری ثبت نشده است. اولین نفر باشید.</p>
+    {% endfor %}
+    </div>
+  </div>
+
   <div class="section-head">
     <h2 class="section-title">محصولات مشابه</h2>
     <a class="link" href="{% url 'category' product.category.slug %}">همه {{ product.category.name }}</a>
   </div>
   <div class="grid">{% for p in similar %}{% include 'partials/product_card.html' %}{% endfor %}</div>
 </div>
+<script>
+  document.querySelectorAll('.rate-picks input').forEach((input) => {
+    input.addEventListener('click', function () {
+      if (this.dataset.on === '1') {
+        this.checked = false;
+        this.dataset.on = '';
+      } else {
+        document.querySelectorAll('.rate-picks input').forEach((item) => item.dataset.on = '');
+        this.dataset.on = '1';
+      }
+    });
+  });
+</script>
 {% endblock %}
