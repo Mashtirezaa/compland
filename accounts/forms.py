@@ -18,6 +18,7 @@ class RegisterForm(UserCreationForm):
         error_messages={"unique": "این نام کاربری قبلاً ثبت شده است."},
     )
     first_name = forms.CharField(label="نام", max_length=150)
+    email = forms.EmailField(label="ایمیل")
     password1 = forms.CharField(label="رمز عبور", widget=forms.PasswordInput)
     password2 = forms.CharField(label="تکرار رمز عبور", widget=forms.PasswordInput)
 
@@ -25,6 +26,32 @@ class RegisterForm(UserCreationForm):
         model = User
         fields = ("username", "first_name", "email")
         labels = {"username": "نام کاربری", "first_name": "نام", "email": "ایمیل"}
+
+    def clean_email(self):
+        email = self.cleaned_data["email"]
+        if User.objects.filter(email=email).exists():
+            raise forms.ValidationError("این ایمیل قبلاً ثبت شده است.")
+        return email
+
+
+class OtpForm(forms.Form):
+    code = forms.CharField(label="کد تأیید", max_length=6, min_length=6)
+
+    def clean_code(self):
+        code = self.cleaned_data["code"].strip()
+        if not code.isdigit() or len(code) != 6:
+            raise forms.ValidationError("کد باید ۶ رقم باشد.")
+        return code
+
+
+class EmailChangeForm(forms.Form):
+    email = forms.EmailField(label="ایمیل جدید")
+
+    def clean_email(self):
+        email = self.cleaned_data["email"]
+        if User.objects.filter(email=email).exists():
+            raise forms.ValidationError("این ایمیل قبلاً ثبت شده است.")
+        return email
 
 
 class ProfileForm(forms.ModelForm):

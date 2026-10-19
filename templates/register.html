@@ -42,7 +42,7 @@
     <div class="register-fields">
       {% include 'partials/form_fields.html' %}
     </div>
-    <button class="btn block">ساخت حساب</button>
+    <button class="btn block">ارسال کد تأیید</button>
     <p class="muted center">قبلاً ثبت‌نام کرده‌اید؟ <a class="link" href="{% url 'accounts:login' %}{% if next %}?next={{ next|urlencode }}{% endif %}">ورود</a></p>
   </form>
 </div>
