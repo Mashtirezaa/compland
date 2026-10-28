@@ -8,7 +8,10 @@
     <input type="hidden" name="next" value="{{ next }}">
     {% include 'partials/form_fields.html' %}
     <button class="btn block">ورود</button>
-    <p class="muted center">حساب ندارید؟ <a class="link" href="{% url 'accounts:register' %}{% if next %}?next={{ next|urlencode }}{% endif %}">ثبت‌نام</a></p>
+    <p class="muted center">حساب ندارید؟ <a class="link" href="{% url 'accounts:register' %}{% if next %}?next={{ next|urlencode }}{% endif %}">ثبت‌نام</a>
+      <span> | </span>
+      <a class="link" href="{% url 'accounts:forgot' %}">رمز را فراموش کرده‌ام</a>
+    </p>
   </form>
 </div>
 {% endblock %}

@@ -30,7 +30,7 @@
       <button class="btn block">تأیید و ساخت حساب</button>
     </form>
     <div class="muted center" style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:10px">
-      <form method="post" action="{% url 'accounts:resend' %}">{% csrf_token %}<button class="link">ارسال دوباره کد</button></form>
+      <form method="post" action="{% url 'accounts:resend' %}">{% csrf_token %}<button type="submit" class="link resend-btn" data-wait="{{ wait|default:0 }}"{% if wait %} disabled{% endif %}>ارسال دوباره کد</button></form>
       <a class="link" href="{% url 'accounts:change_email' %}">تغییر آدرس ایمیل</a>
     </div>
   </div>

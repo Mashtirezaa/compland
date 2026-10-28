@@ -115,3 +115,36 @@ document.querySelectorAll('form').forEach((form) => {
     sessionStorage.setItem('keep-scroll', String(window.scrollY));
   });
 });
+
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  const label = () => {
+    const dark = document.documentElement.classList.contains('dark');
+    const text = dark ? 'حالت روز' : 'حالت شب';
+    themeToggle.title = text;
+    themeToggle.setAttribute('aria-label', text);
+  };
+  label();
+  themeToggle.onclick = () => {
+    const dark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+    label();
+  };
+}
+
+document.querySelectorAll('.resend-btn').forEach((btn) => {
+  let left = Number(btn.getAttribute('data-wait') || 0);
+  const fa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
+  const tick = () => {
+    if (left <= 0) {
+      btn.disabled = false;
+      btn.textContent = 'ارسال دوباره کد';
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'ارسال دوباره (' + fa(left) + ')';
+    left -= 1;
+    setTimeout(tick, 1000);
+  };
+  if (left > 0) tick();
+});

@@ -54,6 +54,25 @@ class EmailChangeForm(forms.Form):
         return email
 
 
+class ForgotForm(forms.Form):
+    email = forms.EmailField(label="ایمیل")
+
+
+class ResetPasswordForm(forms.Form):
+    password1 = forms.CharField(label="رمز جدید", widget=forms.PasswordInput)
+    password2 = forms.CharField(label="تکرار رمز جدید", widget=forms.PasswordInput)
+
+    def clean(self):
+        data = super().clean()
+        p1 = data.get("password1") or ""
+        p2 = data.get("password2") or ""
+        if p1 and p1 != p2:
+            raise forms.ValidationError("دو رمز یکسان نیستند.")
+        if p1 and len(p1) < 8:
+            raise forms.ValidationError("رمز باید حداقل ۸ کاراکتر باشد.")
+        return data
+
+
 class ProfileForm(forms.ModelForm):
     first_name = forms.CharField(label="نام", max_length=150)
     last_name = forms.CharField(label="نام خانوادگی", max_length=150, required=False)

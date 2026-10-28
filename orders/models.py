@@ -32,6 +32,10 @@ class Order(models.Model):
         return f"سفارش {self.id} - {self.full_name}"
 
     @property
+    def number(self):
+        return self.user.orders.filter(id__lte=self.id).count()
+
+    @property
     def can_cancel(self):
         return self.status in ("pending", "processing")
 

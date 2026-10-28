@@ -81,5 +81,5 @@ def cancel(request, id):
             product.save(update_fields=["stock", "sales"])
         order.status = "canceled"
         order.save(update_fields=["status"])
-    messages.success(request, f"سفارش شماره {order.id} لغو شد و موجودی کالا برگشت.")
+    messages.success(request, f"سفارش شماره {order.number} لغو شد و موجودی کالا برگشت.")
     return redirect("accounts:profile")

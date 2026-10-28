@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load shop_tags %}
-{% block title %}سفارش شماره {{ order.id|fa }}{% endblock %}
+{% block title %}سفارش شماره {{ order.number|fa }}{% endblock %}
 {% block content %}
 <style>
   .footer { display: none !important; }
@@ -30,10 +30,10 @@
   <p class="breadcrumb">
     <a href="{% url 'home' %}">خانه</a> /
     <a href="{% url 'accounts:profile' %}">پنل کاربری</a> /
-    سفارش شماره {{ order.id|fa }}
+    سفارش شماره {{ order.number|fa }}
   </p>
   <div class="page-head">
-    <h1 class="page-title">سفارش شماره {{ order.id|fa }}</h1>
+    <h1 class="page-title">سفارش شماره {{ order.number|fa }}</h1>
     <span class="status {{ order.status }}">{{ order.get_status_display }}</span>
   </div>
 
